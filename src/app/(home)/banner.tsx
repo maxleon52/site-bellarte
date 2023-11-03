@@ -1,0 +1,12 @@
+import React from "react";
+
+export default function Banner() {
+  return (
+    <section className="flex h-36 items-center justify-evenly border-2 border-blue-500">
+      <span className="text-lg">Banner</span>
+      <span className="text-lg">Banner</span>
+      <span className="text-lg">Banner</span>
+      <span className="text-lg">Banner</span>
+    </section>
+  );
+}
