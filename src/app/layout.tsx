@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import WhatsappIcon from "@/components/whatsapp";
 
@@ -25,7 +26,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
-        <div>FOOTER</div>
+        <Footer />
 
         <WhatsappIcon />
       </body>

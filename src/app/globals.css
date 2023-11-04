@@ -33,9 +33,7 @@ body {
   height: 100% !important;
 }
 
-.swiper-pagination-bullet-active {
-  background: #f4f4f5 !important;
-}
+
 
 @layer base {
   :root {

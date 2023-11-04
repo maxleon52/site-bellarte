@@ -1,22 +1,24 @@
 import * as React from "react";
 
+import { cn } from "@/lib/utils";
+
 interface IconProps {
-  width?: number;
-  height?: number;
+  className?: string;
 }
-function WhatsappIcon({ width = 100, height = 100 }: IconProps) {
+
+function WhatsappIcon({ className }: IconProps) {
   return (
     <a
       href=""
-      className="animate-pulseShadow fixed bottom-2 right-2 z-10 rounded-full"
+      className="fixed bottom-2 right-2 z-10 animate-pulseShadow rounded-full"
     >
       <svg
-        width={width}
-        height={height}
+        width={70}
+        height={70}
         viewBox="0 0 70 70"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="h-12 w-12 sm:h-14 sm:w-14"
+        className={cn("h-12 w-12 sm:h-14 sm:w-14", className)}
       >
         <circle cx={35} cy={35} r={35} fill="url(#paint0_linear_30300_1026)" />
         <path
