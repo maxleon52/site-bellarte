@@ -10,12 +10,25 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+const datafake = [
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dolore aspernatur vel, natus aperiam reprehenderit deserunt sed similique dolorum dolores possimus suscipit earum, esse ipsum eum, commodi nam culpa laudantium, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dolore aspernatur vel, natus aperiam reprehenderit deserunt sed similique dolorum dolores possimus suscipit earum, esse ipsum eum, commodi nam culpa laudantium.",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit Ea distinctio error necessitatibus debitis molestiae, iure recusandae. Nemo tempora excepturi laudantium facere animi tempore dolorem incidunt ex libero. Ab, deserunt ex?",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dolore aspernatur vel, natus aperiam reprehenderit deserunt sed similique dolorum dolores possimus suscipit earum, esse ipsum eum, commodi nam culpa laudantium, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dolore aspernatur vel, natus aperiam reprehenderit deserunt sed similique dolorum dolores possimus suscipit earum, esse ipsum eum, commodi nam culpa laudantium.",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit.  Ea distinctio error necessitatibus debitis molestiae, iure recusandae. Nemo tempora excepturi laudantium facere animi tempore dolorem incidunt ex libero. Ab, deserunt ex?",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dolore aspernatur vel, natus aperiam reprehenderit deserunt sed similique dolorum dolores possimus suscipit earum, esse ipsum eum, commodi nam culpa laudantium, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dolore aspernatur vel, natus aperiam reprehenderit deserunt sed similique dolorum dolores possimus suscipit earum, esse ipsum eum, commodi nam culpa laudantium.",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea distinctio error necessitatibus debitis molestiae, iure recusandae. Nemo tempora excepturi laudantium facere animi tempore dolorem incidunt ex libero. Ab, deserunt ex?",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dolore aspernatur vel, natus aperiam reprehenderit deserunt sed similique dolorum dolores possimus suscipit earum, esse ipsum eum, commodi nam culpa laudantium, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dolore aspernatur vel, natus aperiam reprehenderit deserunt sed similique dolorum dolores possimus suscipit earum, esse ipsum eum, commodi nam culpa laudantium.",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea distinctio error necessitatibus debitis molestiae, iure recusandae. Nemo tempora excepturi laudantium facere animi tempore dolorem incidunt ex libero. Ab, deserunt ex?",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dolore aspernatur vel, natus aperiam reprehenderit deserunt sed similique dolorum dolores possimus suscipit earum, esse ipsum eum, commodi nam culpa laudantium, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil dolore aspernatur vel, natus aperiam reprehenderit deserunt sed similique dolorum dolores possimus suscipit earum, esse ipsum eum, commodi nam culpa laudantium.",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea distinctio error necessitatibus debitis molestiae, iure recusandae. Nemo tempora excepturi laudantium facere animi tempore dolorem incidunt ex libero. Ab, deserunt ex?",
+];
 export default function Testimonials() {
   return (
-    <section className="px-4 md:px-8 xl:px-16 2xl:px-40">
+    // <section className="px-4 md:px-8 xl:px-16 2xl:px-40">
+    <section className="">
       <div className="">
         <Swiper
-          className="border-2 border-red-500"
+          className="swiper-testimonial pb-4"
           // install Swiper modules
           navigation
           modules={[Autoplay, Navigation, Pagination]}
@@ -25,6 +38,14 @@ export default function Testimonials() {
           slidesPerView={"auto"}
           pagination={{ clickable: true }}
           grabCursor={true}
+          breakpoints={{
+            300: {
+              spaceBetween: 10,
+            },
+            768: {
+              spaceBetween: 50,
+            },
+          }}
           loop
           autoplay={{
             delay: 2500,
@@ -34,31 +55,18 @@ export default function Testimonials() {
           // onSwiper={(swiper) => console.log(swiper)}
           // onSlideChange={() => console.log("slide change")}
         >
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
-            <SwiperSlide key={item} className="!w-[calc(100%-550px)] flex-none">
-              <div className="flex gap-8 rounded-lg border border-zinc-200 p-8">
+          {datafake.map((item, idx) => (
+            <SwiperSlide
+              key={idx}
+              className="!max-w-[calc(100%-15%)] flex-none sm:!max-w-[calc(100%-50%)]"
+            >
+              <div className="grid justify-items-center gap-8 rounded-lg border border-zinc-200 p-8 2xl:flex">
                 {/* imagem */}
-                <div className="h-24 w-24 flex-none rounded-full bg-zinc-300" />
+                <div className="h-20 w-20 flex-none rounded-full bg-zinc-300 2xl:h-24 2xl:w-24" />
 
                 <div className="grid gap-4">
                   <Quote className="stroke-zinc-400" />
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Eveniet magnam molestias quos quibusdam facilis explicabo
-                    illo nisi ducimus magni, quaerat natus ab nihil, optio in
-                    deleniti! Dolor illum facilis quaerat. Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Eveniet magnam molestias
-                    quos quibusdam facilis explicabo illo nisi ducimus magni,
-                    quaerat natus ab nihil, optio in deleniti! Dolor illum
-                    facilis quaerat. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Eveniet magnam molestias quos quibusdam
-                    facilis explicabo illo nisi ducimus magni, quaerat natus ab
-                    nihil, optio in deleniti! Dolor illum facilis quaerat. Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-                    magnam molestias quos quibusdam facilis explicabo illo nisi
-                    ducimus magni, quaerat natus ab nihil, optio in deleniti!
-                    Dolor illum facilis quaerat.
-                  </p>
+                  <p className="text-justify text-sm xl:text-base">{item}</p>
 
                   <div className="flex items-center justify-between">
                     <strong>Fulano de tal</strong>

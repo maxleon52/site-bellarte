@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body
         className={`${inter.className} flex min-h-screen flex-col border-2 border-green-500`}
       >

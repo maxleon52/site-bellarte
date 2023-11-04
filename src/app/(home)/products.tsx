@@ -11,7 +11,7 @@ import {
 
 export default function Products() {
   return (
-    <section className="flex flex-col gap-6 border-2 border-red-500 px-4 md:px-8 xl:px-16 2xl:px-40">
+    <section className="flex flex-col gap-6 px-4 md:px-8 xl:px-16 2xl:px-40">
       <h2 className="text-center">Produtos</h2>
 
       <ul className="flex w-full gap-6 overflow-scroll pb-4 md:items-center md:justify-center md:overflow-hidden">

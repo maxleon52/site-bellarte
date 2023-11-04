@@ -21,7 +21,7 @@ export default function Header() {
 
       <div className="order-first flex items-center xl:order-none">
         <nav className="hidden xl:flex">
-          <ul className="flex items-center justify-center gap-6 border-2 border-red-500">
+          <ul className="flex items-center justify-center gap-6">
             <li>
               <Link href="/Categoria-1">Categoria 1</Link>
             </li>
