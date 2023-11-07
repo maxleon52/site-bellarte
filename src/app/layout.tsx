@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Alegreya } from "next/font/google";
 
 import "./globals.css";
 
@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import WhatsappIcon from "@/components/whatsapp";
 
-const inter = Inter({ subsets: ["latin"] });
+const alegreya = Alegreya({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,9 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body
-        className={`${inter.className} flex min-h-screen flex-col border-2 border-green-500`}
-      >
+      <body className={`${alegreya.className} flex min-h-screen flex-col`}>
         <Header />
         {children}
         <Footer />

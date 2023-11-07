@@ -1,6 +1,10 @@
-import Link from "next/link";
-import React from "react";
+"use client";
 
+import Image from "next/image";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+
+import { cn } from "@/lib/utils";
 import { ShoppingCart } from "lucide-react";
 
 import { Separator } from "@/components/ui/separator";
@@ -13,11 +17,42 @@ import {
 } from "@/components/ui/sheet";
 
 export default function Header() {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    // Adiciona um ouvinte de evento para detectar o scroll
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove o ouvinte de evento quando o componente é desmontado
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="flex h-20 items-center justify-between bg-zinc-50 px-4 shadow-sm md:h-24 md:px-8 xl:px-16 2xl:px-40">
-      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-200 md:h-16 md:w-16">
-        B
-      </div>
+    <header
+      className={cn(
+        "sticky top-0 z-20 flex h-20 items-center justify-between overflow-hidden bg-transparent px-4 md:h-24 md:px-8 xl:px-16 2xl:px-40",
+        scrolling === false ? "bg-transparent" : "bg-white shadow-sm",
+      )}
+    >
+      <Link href="/">
+        <Image
+          src="/svgs/logo-bellarte.svg"
+          alt="logo da bellarte"
+          width={150}
+          height={150}
+          className="!h-8 md:!h-12"
+        />
+      </Link>
 
       <div className="order-first flex items-center xl:order-none">
         <nav className="hidden xl:flex">

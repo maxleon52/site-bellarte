@@ -11,10 +11,12 @@ import "swiper/css/pagination";
 
 export default function Hero() {
   return (
-    <section className="pt-4 xl:px-16 2xl:px-40">
-      <h1 className="text-center text-[56px]">Uma frase de efeito</h1>
+    <section className="flex flex-col gap-y-8 pt-8 md:pt-12 xl:px-16 2xl:px-40 2xl:pt-16">
+      <h1 className="bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-center text-2xl font-extrabold text-transparent md:text-3xl xl:text-4xl 2xl:text-5xl">
+        Artesanato de Luxo em Crochê: <br /> Descubra Nossas Bolsas Exclusivas
+      </h1>
       <Swiper
-        className="h-[50vh] sm:h-[70vh] "
+        className="h-[50vh] w-full sm:h-[70vh]"
         // install Swiper modules
         navigation
         modules={[Autoplay, Navigation, Pagination]}
