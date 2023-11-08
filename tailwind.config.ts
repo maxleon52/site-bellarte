@@ -17,6 +17,11 @@ module.exports = {
     },
     extend: {
       colors: {
+        "bellarte-50": "#fff0f0",
+        "bellarte-200": "#D4A5AA",
+        "bellarte-300": "#B8848C",
+        "bellarte-400": "#E29A9C",
+        "bellarte-800": "#9E6871",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

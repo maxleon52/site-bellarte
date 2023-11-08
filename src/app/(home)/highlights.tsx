@@ -18,7 +18,7 @@ export default function Highlights() {
             </div>
 
             <img
-              src="images/no-item.png"
+              src="images/no-item.webp"
               alt="imagem de carinho de compras"
               className="w-full object-cover"
             />
