@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
+import { linksHeader } from "@/constants";
 import { cn } from "@/lib/utils";
 import { ShoppingCart } from "lucide-react";
 
@@ -57,15 +58,16 @@ export default function Header() {
       <div className="order-first flex items-center xl:order-none">
         <nav className="hidden xl:flex">
           <ul className="flex items-center justify-center gap-6">
-            <li>
-              <Link href="/Categoria-1">Categoria 1</Link>
-            </li>
-            <li>
-              <Link href="/Categoria-2">Categoria 2</Link>
-            </li>
-            <li>
-              <Link href="/Categoria-3">Categoria 3</Link>
-            </li>
+            {linksHeader.map((link) => (
+              <li key={link.id}>
+                <Link
+                  href={link.pathname}
+                  className="text-bellarte-300 hover:text-bellarte-800 text-lg transition-all"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
@@ -77,22 +79,31 @@ export default function Header() {
           </SheetTrigger>
           <SheetContent side="left" className="flex flex-col gap-4 xl:hidden">
             <SheetHeader>
-              <SheetTitle className="text-left">
-                Are you sure absolutely sure?
+              <SheetTitle className=" flex items-center text-left">
+                <Link href="/" className="!w-fit">
+                  <Image
+                    src="/svgs/logo-bellarte.svg"
+                    alt="logo da bellarte"
+                    width={150}
+                    height={150}
+                    className="w-auto max-w-[50%]"
+                  />
+                </Link>
               </SheetTitle>
               <Separator />
             </SheetHeader>
-            <nav className="">
+            <nav>
               <ul className="flex flex-col gap-6 text-left">
-                <li>
-                  <Link href="/Categoria-1">Categoria 1</Link>
-                </li>
-                <li>
-                  <Link href="/Categoria-2">Categoria 2</Link>
-                </li>
-                <li>
-                  <Link href="/Categoria-3">Categoria 3</Link>
-                </li>
+                {linksHeader.map((link) => (
+                  <li key={link.id}>
+                    <Link
+                      href={link.pathname}
+                      className="text-bellarte-300 hover:text-bellarte-800 text-lg transition-all"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </nav>
           </SheetContent>

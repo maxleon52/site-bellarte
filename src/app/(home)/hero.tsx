@@ -11,28 +11,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Button } from "@/components/ui/button";
 
-const staticData = [
-  {
-    id: 1,
-    name: "Destaque 1",
-    url: "/images/destaque-1.webp",
-  },
-  {
-    id: 2,
-    name: "Destaque 2",
-    url: "/images/destaque-2.webp",
-  },
-  {
-    id: 3,
-    name: "Destaque 3",
-    url: "/images/destaque-3.webp",
-  },
-  {
-    id: 4,
-    name: "Destaque 4",
-    url: "/images/destaque-4.webp",
-  },
-];
+import { imagesHero } from "@/constants";
 
 export default function Hero() {
   return (
@@ -57,7 +36,7 @@ export default function Hero() {
         // onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log("slide change")}
       >
-        {staticData.map((item) => (
+        {imagesHero.map((item) => (
           <SwiperSlide
             key={item.id}
             className="!flex h-auto !items-center !justify-center gap-0 !overflow-hidden !bg-transparent md:!gap-12"
