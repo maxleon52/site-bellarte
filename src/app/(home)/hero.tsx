@@ -41,12 +41,12 @@ export default function Hero() {
             className="!flex h-auto !items-center !justify-center gap-0 !overflow-hidden !bg-transparent md:!gap-12"
           >
             <div className="absolute bottom-[30px] flex w-full flex-col items-center justify-center gap-2 bg-[rgba(255,255,255,0.55)] py-2 md:relative md:w-fit md:items-start md:gap-4 md:bg-transparent md:py-0">
-              <strong className="from-bellarte-400 via-bellarte-300 to-bellarte-200 text-bellarte-800 bg-gradient-to-r bg-clip-text text-3xl md:text-5xl md:text-transparent 2xl:text-7xl">
+              <strong className="bg-gradient-to-r from-bellarte-400 via-bellarte-300 to-bellarte-200 bg-clip-text text-3xl text-bellarte-800 md:text-5xl md:text-transparent 2xl:text-7xl">
                 {item.name}
               </strong>
               <Button
                 variant="outline"
-                className="border-bellarte-300 text-bellarte-300 hover:text-bellarte-300 hover:bg-bellarte-50 w-fit bg-zinc-50 text-lg md:px-6 md:py-4 md:text-xl 2xl:px-8 2xl:py-6"
+                className="w-fit border-bellarte-300 bg-zinc-50 text-lg text-bellarte-300 hover:bg-bellarte-50 hover:text-bellarte-300 md:px-6 md:py-4 md:text-xl 2xl:px-8 2xl:py-6"
               >
                 Conferir
               </Button>

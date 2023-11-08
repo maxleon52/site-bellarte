@@ -62,7 +62,7 @@ export default function Header() {
               <li key={link.id}>
                 <Link
                   href={link.pathname}
-                  className="text-bellarte-300 hover:text-bellarte-800 text-lg transition-all"
+                  className="text-lg text-bellarte-300 transition-all hover:text-bellarte-800"
                 >
                   {link.name}
                 </Link>
@@ -98,7 +98,7 @@ export default function Header() {
                   <li key={link.id}>
                     <Link
                       href={link.pathname}
-                      className="text-bellarte-300 hover:text-bellarte-800 text-lg transition-all"
+                      className="text-lg text-bellarte-300 transition-all hover:text-bellarte-800"
                     >
                       {link.name}
                     </Link>
