@@ -111,7 +111,7 @@ export default function Header() {
       </div>
 
       <button>
-        <ShoppingCart />
+        <ShoppingCart className="stroke-bellarte-300" />
       </button>
     </header>
   );
