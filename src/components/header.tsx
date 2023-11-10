@@ -64,7 +64,7 @@ export default function Header() {
                   href={link.pathname}
                   className="text-lg text-bellarte-300 transition-all hover:text-bellarte-800"
                 >
-                  {link.name}
+                  {link.label}
                 </Link>
               </li>
             ))}
@@ -111,7 +111,7 @@ export default function Header() {
       </div>
 
       <button>
-        <ShoppingCart className="stroke-bellarte-300" />
+        <ShoppingCart className="stroke-zinc-950/70" />
       </button>
     </header>
   );

@@ -1,32 +1,38 @@
 export const linksHeader = [
   {
     id: 1,
-    name: "Bolsas",
+    label: "Bolsas",
+    name: "bolsa",
     pathname: "/produtos?q=bolsas",
   },
   {
     id: 2,
-    name: "Vestuários",
+    label: "Vestuários",
+    name: "vestuario",
     pathname: "/produtos?q=vestuarios",
   },
   {
     id: 3,
-    name: "Sousplat",
+    label: "Sousplat",
+    name: "sousplat",
     pathname: "/produtos?q=sousplat",
   },
   {
     id: 4,
-    name: "Porta guardanapos",
+    label: "Porta guardanapos",
+    name: "porta-guardanapo",
     pathname: "/produtos?q=porta-guardanapos",
   },
   {
     id: 5,
-    name: "Amigurumi",
+    label: "Amigurumi",
+    name: "amigurumi",
     pathname: "/produtos?q=amigurumi",
   },
   {
     id: 6,
-    name: "Tapetes",
+    label: "Tapetes",
+    name: "tapete",
     pathname: "/produtos?q=tapetes",
   },
 ];
@@ -64,5 +70,223 @@ export const imagesHighlights = [
     id: 2,
     name: "Bolsa Marrom",
     url: "/images/highlights/bolsa-marrom.webp",
+  },
+];
+
+export const imagesProducts = [
+  {
+    id: String(Math.random()),
+    bolsa: [
+      {
+        id: String(Math.random()),
+        name: "Bolsa Estudante",
+        url: "/images/products/bolsas/bolsa-estudante.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Bolsa Estudante",
+        url: "/images/products/bolsas/bolsa-estudante.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Bolsa Estudante",
+        url: "/images/products/bolsas/bolsa-estudante.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Bolsa Estudante",
+        url: "/images/products/bolsas/bolsa-estudante.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Bolsa Estudante",
+        url: "/images/products/bolsas/bolsa-estudante.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Bolsa Estudante",
+        url: "/images/products/bolsas/bolsa-estudante.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Bolsa Estudante",
+        url: "/images/products/bolsas/bolsa-estudante.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Bolsa Estudante",
+        url: "/images/products/bolsas/bolsa-estudante.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Bolsa Estudante",
+        url: "/images/products/bolsas/bolsa-estudante.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Bolsa Estudante",
+        url: "/images/products/bolsas/bolsa-estudante.webp",
+      },
+    ],
+  },
+  {
+    id: String(Math.random()),
+    vestuario: [
+      {
+        id: String(Math.random()),
+        name: "Biquini",
+        url: "/images/products/vestuario/biquini-azul.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Biquini",
+        url: "/images/products/vestuario/biquini-azul.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Biquini",
+        url: "/images/products/vestuario/biquini-azul.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Biquini",
+        url: "/images/products/vestuario/biquini-azul.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Biquini",
+        url: "/images/products/vestuario/biquini-azul.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Biquini",
+        url: "/images/products/vestuario/biquini-azul.webp",
+      },
+    ],
+  },
+  {
+    id: String(Math.random()),
+    sousplat: [
+      {
+        id: String(Math.random()),
+        name: "Sousplat",
+        url: "/images/products/sousplat/sousplat.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Sousplat",
+        url: "/images/products/sousplat/sousplat.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Sousplat",
+        url: "/images/products/sousplat/sousplat.webp",
+      },
+    ],
+  },
+  {
+    id: String(Math.random()),
+    "porta-guardanapo": [
+      {
+        id: String(Math.random()),
+        name: "Porta Guardanapo",
+        url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Porta Guardanapo",
+        url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Porta Guardanapo",
+        url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Porta Guardanapo",
+        url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Porta Guardanapo",
+        url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Porta Guardanapo",
+        url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Porta Guardanapo",
+        url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
+      },
+    ],
+  },
+  {
+    id: String(Math.random()),
+    amigurumi: [
+      {
+        id: String(Math.random()),
+        name: "Amigurumi",
+        url: "/images/products/amigurumi/amigurumi.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Amigurumi",
+        url: "/images/products/amigurumi/amigurumi.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Amigurumi",
+        url: "/images/products/amigurumi/amigurumi.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Amigurumi",
+        url: "/images/products/amigurumi/amigurumi.webp",
+      },
+    ],
+  },
+  {
+    id: String(Math.random()),
+    tapete: [
+      {
+        id: String(Math.random()),
+        name: "Tapete",
+        url: "/images/products/tapetes/tapete.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Tapete",
+        url: "/images/products/tapetes/tapete.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Tapete",
+        url: "/images/products/tapetes/tapete.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Tapete",
+        url: "/images/products/tapetes/tapete.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Tapete",
+        url: "/images/products/tapetes/tapete.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Tapete",
+        url: "/images/products/tapetes/tapete.webp",
+      },
+      {
+        id: String(Math.random()),
+        name: "Tapete",
+        url: "/images/products/tapetes/tapete.webp",
+      },
+    ],
   },
 ];

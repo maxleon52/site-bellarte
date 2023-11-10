@@ -79,11 +79,23 @@ module.exports = {
             "box-shadow": "#24d96400 0 0 0 16px",
           },
         },
+        slideRight: {
+          "0%": {
+            transform: "translateX(-10)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(5px)",
+            opacity: "1",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         pulseShadow: "pulseShadow 1500ms infinite",
+        slideRight:
+          "slideRight 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both",
       },
     },
   },
