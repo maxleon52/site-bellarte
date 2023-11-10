@@ -77,20 +77,22 @@ export default function Testimonials() {
 
                 <div className="grid gap-4">
                   <Quote className="stroke-zinc-400" />
-                  <p className="text-justify text-sm xl:text-base">{item}</p>
+                  <p className="text-justify text-sm text-zinc-500 xl:text-base">
+                    {item}
+                  </p>
 
                   <div className="flex items-center justify-between">
-                    <strong>Fulano de tal</strong>
+                    <strong className="text-zinc-500">Fulano de tal</strong>
                     <div className="flex gap-2">
-                      <small>veja em:</small>
+                      <small className="text-zinc-500">veja em:</small>
                       <a href="">
-                        <Instagram className="h-4 w-4 transition-all hover:stroke-violet-500" />
+                        <Instagram className="h-4 w-4 stroke-zinc-400 transition-all hover:stroke-violet-500" />
                       </a>
                       <a href="">
-                        <Facebook className="h-4 w-4 transition-all hover:stroke-blue-500" />
+                        <Facebook className="h-4 w-4 stroke-zinc-400 transition-all hover:stroke-blue-500" />
                       </a>
                       <a href="">
-                        <Twitter className="h-4 w-4 transition-all hover:stroke-sky-500" />
+                        <Twitter className="h-4 w-4 stroke-zinc-400 transition-all hover:stroke-sky-500" />
                       </a>
                     </div>
                   </div>

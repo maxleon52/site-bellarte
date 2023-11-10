@@ -53,7 +53,9 @@ export default function Products() {
                 <CardTitle className="text-bellarte-300">{item.name}</CardTitle>
               </CardHeader>
               <CardFooter>
-                <span className="text-bellarte-200">R$ 999,00</span>
+                <span className="text-zinc-400 md:text-lg xl:text-xl">
+                  R$ 999,00
+                </span>
               </CardFooter>
             </Card>
           ));
