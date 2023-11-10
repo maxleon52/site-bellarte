@@ -9,7 +9,7 @@ interface IconProps {
 function WhatsappIcon({ className }: IconProps) {
   return (
     <a
-      href=""
+      href="https://api.whatsapp.com/send?phone=5588999047788"
       className="fixed bottom-2 right-2 z-10 animate-pulseShadow rounded-full"
     >
       <svg
