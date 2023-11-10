@@ -1,3 +1,5 @@
+// import { v4 } from "uuid";
+
 export const linksHeader = [
   {
     id: 1,
@@ -40,22 +42,22 @@ export const linksHeader = [
 export const imagesHero = [
   {
     id: 1,
-    name: "Destaque 1",
+    name: "Produto 1",
     url: "/images/hero/hero-1.webp",
   },
   {
     id: 2,
-    name: "Destaque 2",
+    name: "Produto 2",
     url: "/images/hero/hero-2.webp",
   },
   {
     id: 3,
-    name: "Destaque 3",
+    name: "Produto 3",
     url: "/images/hero/hero-3.webp",
   },
   {
     id: 4,
-    name: "Destaque 4",
+    name: "Produto 4",
     url: "/images/hero/hero-4.webp",
   },
 ];
@@ -73,220 +75,257 @@ export const imagesHighlights = [
   },
 ];
 
-export const imagesProducts = [
-  {
-    id: String(Math.random()),
-    bolsa: [
-      {
-        id: String(Math.random()),
-        name: "Bolsa Estudante",
-        url: "/images/products/bolsas/bolsa-estudante.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Bolsa Estudante",
-        url: "/images/products/bolsas/bolsa-estudante.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Bolsa Estudante",
-        url: "/images/products/bolsas/bolsa-estudante.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Bolsa Estudante",
-        url: "/images/products/bolsas/bolsa-estudante.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Bolsa Estudante",
-        url: "/images/products/bolsas/bolsa-estudante.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Bolsa Estudante",
-        url: "/images/products/bolsas/bolsa-estudante.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Bolsa Estudante",
-        url: "/images/products/bolsas/bolsa-estudante.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Bolsa Estudante",
-        url: "/images/products/bolsas/bolsa-estudante.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Bolsa Estudante",
-        url: "/images/products/bolsas/bolsa-estudante.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Bolsa Estudante",
-        url: "/images/products/bolsas/bolsa-estudante.webp",
-      },
-    ],
-  },
-  {
-    id: String(Math.random()),
-    vestuario: [
-      {
-        id: String(Math.random()),
-        name: "Biquini",
-        url: "/images/products/vestuario/biquini-azul.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Biquini",
-        url: "/images/products/vestuario/biquini-azul.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Biquini",
-        url: "/images/products/vestuario/biquini-azul.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Biquini",
-        url: "/images/products/vestuario/biquini-azul.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Biquini",
-        url: "/images/products/vestuario/biquini-azul.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Biquini",
-        url: "/images/products/vestuario/biquini-azul.webp",
-      },
-    ],
-  },
-  {
-    id: String(Math.random()),
-    sousplat: [
-      {
-        id: String(Math.random()),
-        name: "Sousplat",
-        url: "/images/products/sousplat/sousplat.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Sousplat",
-        url: "/images/products/sousplat/sousplat.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Sousplat",
-        url: "/images/products/sousplat/sousplat.webp",
-      },
-    ],
-  },
-  {
-    id: String(Math.random()),
-    "porta-guardanapo": [
-      {
-        id: String(Math.random()),
-        name: "Porta Guardanapo",
-        url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Porta Guardanapo",
-        url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Porta Guardanapo",
-        url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Porta Guardanapo",
-        url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Porta Guardanapo",
-        url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Porta Guardanapo",
-        url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Porta Guardanapo",
-        url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
-      },
-    ],
-  },
-  {
-    id: String(Math.random()),
-    amigurumi: [
-      {
-        id: String(Math.random()),
-        name: "Amigurumi",
-        url: "/images/products/amigurumi/amigurumi.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Amigurumi",
-        url: "/images/products/amigurumi/amigurumi.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Amigurumi",
-        url: "/images/products/amigurumi/amigurumi.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Amigurumi",
-        url: "/images/products/amigurumi/amigurumi.webp",
-      },
-    ],
-  },
-  {
-    id: String(Math.random()),
-    tapete: [
-      {
-        id: String(Math.random()),
-        name: "Tapete",
-        url: "/images/products/tapetes/tapete.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Tapete",
-        url: "/images/products/tapetes/tapete.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Tapete",
-        url: "/images/products/tapetes/tapete.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Tapete",
-        url: "/images/products/tapetes/tapete.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Tapete",
-        url: "/images/products/tapetes/tapete.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Tapete",
-        url: "/images/products/tapetes/tapete.webp",
-      },
-      {
-        id: String(Math.random()),
-        name: "Tapete",
-        url: "/images/products/tapetes/tapete.webp",
-      },
-    ],
-  },
-];
+// export const imagesProducts = [
+//   {
+//     id: v4(),
+//     bolsa: [
+//       {
+//         id: v4(),
+//         name: "Bolsa Estudante",
+//         slug: "bolsa-estudante",
+//         url: "/images/products/bolsas/bolsa-estudante.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Bolsa Estudante",
+//         slug: "bolsa-estudante",
+//         url: "/images/products/bolsas/bolsa-estudante.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Bolsa Estudante",
+//         slug: "bolsa-estudante",
+//         url: "/images/products/bolsas/bolsa-estudante.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Bolsa Estudante",
+//         slug: "bolsa-estudante",
+//         url: "/images/products/bolsas/bolsa-estudante.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Bolsa Estudante",
+//         slug: "bolsa-estudante",
+//         url: "/images/products/bolsas/bolsa-estudante.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Bolsa Estudante",
+//         slug: "bolsa-estudante",
+//         url: "/images/products/bolsas/bolsa-estudante.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Bolsa Estudante",
+//         slug: "bolsa-estudante",
+//         url: "/images/products/bolsas/bolsa-estudante.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Bolsa Estudante",
+//         slug: "bolsa-estudante",
+//         url: "/images/products/bolsas/bolsa-estudante.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Bolsa Estudante",
+//         slug: "bolsa-estudante",
+//         url: "/images/products/bolsas/bolsa-estudante.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Bolsa Estudante",
+//         slug: "bolsa-estudante",
+//         url: "/images/products/bolsas/bolsa-estudante.webp",
+//       },
+//     ],
+//   },
+//   {
+//     id: v4(),
+//     vestuario: [
+//       {
+//         id: v4(),
+//         name: "Biquini",
+//         slug: "biquini",
+//         url: "/images/products/vestuario/biquini-azul.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Biquini",
+//         slug: "biquini",
+//         url: "/images/products/vestuario/biquini-azul.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Biquini",
+//         slug: "biquini",
+//         url: "/images/products/vestuario/biquini-azul.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Biquini",
+//         slug: "biquini",
+//         url: "/images/products/vestuario/biquini-azul.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Biquini",
+//         slug: "biquini",
+//         url: "/images/products/vestuario/biquini-azul.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Biquini",
+//         slug: "biquini",
+//         url: "/images/products/vestuario/biquini-azul.webp",
+//       },
+//     ],
+//   },
+//   {
+//     id: v4(),
+//     sousplat: [
+//       {
+//         id: v4(),
+//         name: "Sousplat",
+//         slug: "sousplat",
+//         url: "/images/products/sousplat/sousplat.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Sousplat",
+//         slug: "sousplat",
+//         url: "/images/products/sousplat/sousplat.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Sousplat",
+//         slug: "sousplat",
+//         url: "/images/products/sousplat/sousplat.webp",
+//       },
+//     ],
+//   },
+//   {
+//     id: v4(),
+//     "porta-guardanapo": [
+//       {
+//         id: v4(),
+//         name: "Porta Guardanapo",
+//         slug: "porta-guardanapo",
+//         url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Porta Guardanapo",
+//         slug: "porta-guardanapo",
+//         url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Porta Guardanapo",
+//         slug: "porta-guardanapo",
+//         url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Porta Guardanapo",
+//         slug: "porta-guardanapo",
+//         url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Porta Guardanapo",
+//         slug: "porta-guardanapo",
+//         url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Porta Guardanapo",
+//         slug: "porta-guardanapo",
+//         url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Porta Guardanapo",
+//         slug: "porta-guardanapo",
+//         url: "/images/products/porta-guardanapo/porta-guardanapo.webp",
+//       },
+//     ],
+//   },
+//   {
+//     id: v4(),
+//     amigurumi: [
+//       {
+//         id: v4(),
+//         name: "Amigurumi",
+//         slug: "amigurumi",
+//         url: "/images/products/amigurumi/amigurumi.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Amigurumi",
+//         slug: "amigurumi",
+//         url: "/images/products/amigurumi/amigurumi.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Amigurumi",
+//         slug: "amigurumi",
+//         url: "/images/products/amigurumi/amigurumi.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Amigurumi",
+//         slug: "amigurumi",
+//         url: "/images/products/amigurumi/amigurumi.webp",
+//       },
+//     ],
+//   },
+//   {
+//     id: v4(),
+//     tapete: [
+//       {
+//         id: v4(),
+//         name: "Tapete",
+//         slug: "tapete",
+//         url: "/images/products/tapetes/tapete.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Tapete",
+//         slug: "tapete",
+//         url: "/images/products/tapetes/tapete.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Tapete",
+//         slug: "tapete",
+//         url: "/images/products/tapetes/tapete.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Tapete",
+//         slug: "tapete",
+//         url: "/images/products/tapetes/tapete.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Tapete",
+//         slug: "tapete",
+//         url: "/images/products/tapetes/tapete.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Tapete",
+//         slug: "tapete",
+//         url: "/images/products/tapetes/tapete.webp",
+//       },
+//       {
+//         id: v4(),
+//         name: "Tapete",
+//         slug: "tapete",
+//         url: "/images/products/tapetes/tapete.webp",
+//       },
+//     ],
+//   },
+// ];

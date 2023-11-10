@@ -40,7 +40,7 @@ export default function Hero() {
             className="!flex h-auto !items-center !justify-center gap-0 !overflow-hidden !bg-transparent md:!gap-12"
           >
             <div className="absolute bottom-[30px] flex w-full flex-col items-center justify-center gap-2 bg-[rgba(255,255,255,0.55)] py-2 md:relative md:w-fit md:items-start md:gap-4 md:bg-transparent md:py-0">
-              <strong className="bg-gradient-to-r from-bellarte-400 via-bellarte-300 to-bellarte-200 bg-clip-text text-3xl text-bellarte-800 md:text-5xl md:text-transparent 2xl:text-7xl">
+              <strong className="bg-gradient-to-r from-bellarte-400 via-bellarte-300 to-bellarte-200 bg-clip-text text-3xl text-bellarte-800 md:text-5xl md:text-transparent">
                 {item.name}
               </strong>
               <Button

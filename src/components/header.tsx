@@ -1,8 +1,6 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { linksHeader } from "@/constants";
 import { cn } from "@/lib/utils";
@@ -18,31 +16,31 @@ import {
 } from "@/components/ui/sheet";
 
 export default function Header() {
-  const [scrolling, setScrolling] = useState(false);
+  // const [scrolling, setScrolling] = useState(false);
 
-  useEffect(() => {
-    // Adiciona um ouvinte de evento para detectar o scroll
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
+  // useEffect(() => {
+  //   // Adiciona um ouvinte de evento para detectar o scroll
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 0) {
+  //       setScrolling(true);
+  //     } else {
+  //       setScrolling(false);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    // Remove o ouvinte de evento quando o componente é desmontado
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   // Remove o ouvinte de evento quando o componente é desmontado
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <header
       className={cn(
-        "sticky top-0 z-20 flex h-20 items-center justify-between overflow-hidden bg-transparent px-4 md:h-24 md:px-8 xl:px-16 2xl:px-40",
-        scrolling === false ? "bg-transparent" : "bg-white shadow-sm",
+        "sticky top-0 z-20 flex h-20 items-center justify-between overflow-hidden bg-transparent bg-white px-4 shadow-sm md:h-24 md:px-8 xl:px-16 2xl:px-40",
+        // scrolling === false ? "bg-transparent" : "bg-white shadow-sm",
       )}
     >
       <Link href="/">

@@ -25,7 +25,7 @@ const datafake = [
 export default function Testimonials() {
   return (
     <section className="flex flex-col gap-4 bg-bellarte-25/[0.15] py-12 md:gap-6 xl:gap-8 ">
-      <h2 className=" bg-gradient-to-r from-bellarte-400 via-bellarte-300 to-bellarte-200 bg-clip-text px-4 text-3xl font-bold text-transparent md:px-8 md:text-5xl xl:px-16 2xl:px-40 2xl:text-7xl">
+      <h2 className=" bg-gradient-to-r from-bellarte-400 via-bellarte-300 to-bellarte-200 bg-clip-text px-4 text-3xl font-bold text-transparent md:px-8 md:text-5xl xl:px-16 2xl:px-40">
         Avaliações
       </h2>
 

@@ -4,7 +4,6 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 import { linksHeader } from "@/constants";
-import { ArrowRight } from "lucide-react";
 import { v4 } from "uuid";
 
 import {
@@ -14,6 +13,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export default function Products() {
   const [currentCategory, setCurrentCategory] = useState("bolsa");
@@ -277,34 +283,44 @@ export default function Products() {
   }, []);
 
   return (
-    <section className="flex flex-col gap-6 px-4 py-8 md:px-8 xl:px-16 2xl:px-40">
-      <h2 className="bg-gradient-to-r from-bellarte-400 via-bellarte-300 to-bellarte-200 bg-clip-text text-3xl font-bold text-transparent md:text-5xl">
-        Produtos
-      </h2>
+    <section className="flex flex-1 flex-col gap-6 px-4 py-8 md:px-8 xl:px-16 2xl:px-40">
+      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <h2 className="bg-gradient-to-r from-bellarte-400 via-bellarte-300 to-bellarte-200 bg-clip-text text-3xl font-bold text-transparent md:text-5xl">
+          Produtos
+        </h2>
 
-      <ul className="flex w-full gap-6 overflow-scroll pb-4 md:overflow-hidden">
-        {linksHeader.map((category) => (
-          <li
-            key={category.id}
-            onClick={() => setCurrentCategory(category.name)}
-            className="flex-none cursor-pointer text-lg text-bellarte-300 transition-all hover:text-bellarte-800"
-          >
-            {category.label}
-          </li>
-        ))}
-      </ul>
+        <Select
+          onValueChange={(value) => setCurrentCategory(value)}
+          defaultValue="bolsa"
+        >
+          <SelectTrigger className="border-zinc-300 text-zinc-400 !ring-0 !ring-offset-0 md:max-w-[200px] md:text-lg">
+            <SelectValue placeholder="Selecione uma categoria" />
+          </SelectTrigger>
+          <SelectContent className="">
+            {linksHeader.map((item) => (
+              <SelectItem
+                key={item.id}
+                value={item.name}
+                className="text-zinc-400"
+              >
+                {item.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
 
-      <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5">
-        {/* {imagesProducts.map((category: any) => { */}
+      <div className="grid flex-1 grid-cols-2 gap-2 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5">
         {products.map((category: any) => {
           return category[currentCategory]?.map((item: any) => (
             <Link key={item.id} href={`/produtos/${item.id}`}>
-              <Card className="group cursor-pointer overflow-hidden transition-all hover:shadow-md">
-                <CardContent className="p-0">
+              <Card className="group flex h-full cursor-pointer flex-col overflow-hidden transition-all hover:shadow-md">
+                <CardContent className="flex-1 p-0">
                   <img
+                    loading="lazy"
                     src={item.url}
                     alt={item.name}
-                    className="w-full object-cover transition-all group-hover:scale-105"
+                    className="h-full w-full object-cover transition-all group-hover:scale-105"
                   />
                 </CardContent>
                 <CardHeader>
@@ -322,14 +338,6 @@ export default function Products() {
           ));
         })}
       </div>
-
-      <Link
-        href="/products"
-        className="group flex w-fit cursor-pointer items-baseline text-2xl font-semibold text-bellarte-300"
-      >
-        Explorar produtos{" "}
-        <ArrowRight className="h-4 opacity-0 transition-all group-hover:animate-slideRight" />
-      </Link>
     </section>
   );
 }
