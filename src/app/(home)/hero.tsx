@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React from "react";
@@ -14,8 +13,8 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col gap-y-8 bg-[#F0E5E7]/[0.15] pt-8 md:pt-12 xl:px-16 2xl:px-40 2xl:pt-16">
-      <h1 className="bg-gradient-to-r from-[#E29A9C] via-[#B8848C] to-[#D4A5AA] bg-clip-text text-center text-2xl font-extrabold text-transparent md:text-3xl xl:text-4xl 2xl:text-5xl">
+    <section className="flex flex-col gap-y-8 bg-bellarte-25/[0.15] pt-8 md:pt-12 xl:px-16 2xl:px-40 2xl:pt-16">
+      <h1 className="bg-gradient-to-r from-bellarte-400 via-bellarte-300 to-bellarte-200 bg-clip-text text-center text-2xl font-extrabold text-transparent md:text-3xl xl:text-4xl 2xl:text-5xl">
         Artesanato de Luxo em Crochê: <br /> Descubra Nossas peças Exclusivas
       </h1>
       <Swiper
@@ -53,6 +52,7 @@ export default function Hero() {
             </div>
 
             <img
+              loading="lazy"
               id={`teste`}
               src={item.url}
               alt={item.name}

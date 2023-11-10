@@ -35,21 +35,34 @@ export const imagesHero = [
   {
     id: 1,
     name: "Destaque 1",
-    url: "/images/destaque-1.webp",
+    url: "/images/hero/hero-1.webp",
   },
   {
     id: 2,
     name: "Destaque 2",
-    url: "/images/destaque-2.webp",
+    url: "/images/hero/hero-2.webp",
   },
   {
     id: 3,
     name: "Destaque 3",
-    url: "/images/destaque-3.webp",
+    url: "/images/hero/hero-3.webp",
   },
   {
     id: 4,
     name: "Destaque 4",
-    url: "/images/destaque-4.webp",
+    url: "/images/hero/hero-4.webp",
+  },
+];
+
+export const imagesHighlights = [
+  {
+    id: 1,
+    name: "Bolsa vermelha",
+    url: "/images/highlights/bolsa-vermelha.webp",
+  },
+  {
+    id: 2,
+    name: "Bolsa Marrom",
+    url: "/images/highlights/bolsa-marrom.webp",
   },
 ];

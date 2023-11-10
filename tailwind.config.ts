@@ -17,6 +17,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        "bellarte-25": "#F0E5E7",
         "bellarte-50": "#fff0f0",
         "bellarte-200": "#D4A5AA",
         "bellarte-300": "#B8848C",
