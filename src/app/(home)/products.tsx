@@ -50,10 +50,10 @@ export default function Products() {
                 />
               </CardContent>
               <CardHeader>
-                <CardTitle>{item.name}</CardTitle>
+                <CardTitle className="text-bellarte-300">{item.name}</CardTitle>
               </CardHeader>
               <CardFooter>
-                <p>R$ 999,00</p>
+                <span className="text-bellarte-200">R$ 999,00</span>
               </CardFooter>
             </Card>
           ));
@@ -62,7 +62,7 @@ export default function Products() {
 
       <Link
         href="/products"
-        className="group flex w-fit cursor-pointer items-baseline text-2xl font-semibold text-bellarte-200"
+        className="group flex w-fit cursor-pointer items-baseline text-2xl font-semibold text-bellarte-300"
       >
         Explorar produtos{" "}
         <ArrowRight className="h-4 opacity-0 transition-all group-hover:animate-slideRight" />

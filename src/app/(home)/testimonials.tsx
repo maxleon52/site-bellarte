@@ -24,9 +24,16 @@ const datafake = [
 ];
 export default function Testimonials() {
   return (
-    // <section className="px-4 md:px-8 xl:px-16 2xl:px-40">
-    <section className="">
-      <div className="">
+    <section className="flex flex-col gap-4 bg-bellarte-25/[0.15] py-12 md:gap-6 xl:gap-8 ">
+      <h2 className=" bg-gradient-to-r from-bellarte-400 via-bellarte-300 to-bellarte-200 bg-clip-text px-4 text-3xl font-bold text-transparent md:px-8 md:text-5xl xl:px-16 2xl:px-40 2xl:text-7xl">
+        Avaliações
+      </h2>
+
+      <p className="px-4 text-zinc-400 md:px-8 md:text-lg xl:px-16 xl:text-xl 2xl:px-40">
+        Veja o que nossos clientes estão falando.
+      </p>
+
+      <div>
         <Swiper
           className="swiper-testimonial pb-4"
           // install Swiper modules
@@ -60,9 +67,13 @@ export default function Testimonials() {
               key={idx}
               className="!max-w-[calc(100%-15%)] flex-none sm:!max-w-[calc(100%-50%)]"
             >
-              <div className="grid justify-items-center gap-8 rounded-lg border border-zinc-200 p-8 2xl:flex">
+              <div className="grid justify-items-center gap-8 rounded-lg border border-zinc-200 bg-white p-8 2xl:flex">
                 {/* imagem */}
-                <div className="h-20 w-20 flex-none rounded-full bg-zinc-300 2xl:h-24 2xl:w-24" />
+                <img
+                  src="/images/eu.webp"
+                  alt="foto do usuário"
+                  className="h-20 w-20 flex-none rounded-full bg-zinc-300 object-cover 2xl:h-24 2xl:w-24"
+                />
 
                 <div className="grid gap-4">
                   <Quote className="stroke-zinc-400" />
