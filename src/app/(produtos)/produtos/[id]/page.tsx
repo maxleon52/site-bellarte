@@ -11,7 +11,8 @@ import {
 
 import SlideProduct from "../../SlideProduct";
 
-export default function Product({ params }: { params: { id: string } }) {
+// export default function Product({ params }: { params: { id: string } }) {
+export default function Product() {
   return (
     <section className="cont grid flex-1 gap-6 px-4 py-8 md:grid-cols-2 md:px-8 xl:px-16 2xl:px-40">
       <div className="max-w-full overflow-hidden">
