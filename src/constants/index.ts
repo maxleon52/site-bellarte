@@ -4,38 +4,38 @@ export const linksHeader = [
   {
     id: 1,
     label: "Bolsas",
-    name: "bolsa",
-    pathname: "/produtos?q=bolsas",
+    name: "bolsas",
+    pathname: "/produtos/bolsas",
   },
   {
     id: 2,
     label: "Vestuários",
-    name: "vestuario",
-    pathname: "/produtos?q=vestuarios",
+    name: "vestuarios",
+    pathname: "/produtos/vestuarios",
   },
   {
     id: 3,
     label: "Sousplat",
     name: "sousplat",
-    pathname: "/produtos?q=sousplat",
+    pathname: "/produtos/sousplat",
   },
   {
     id: 4,
     label: "Porta guardanapos",
-    name: "porta-guardanapo",
-    pathname: "/produtos?q=porta-guardanapos",
+    name: "porta-guardanapos",
+    pathname: "/produtos/porta-guardanapos",
   },
   {
     id: 5,
     label: "Amigurumi",
     name: "amigurumi",
-    pathname: "/produtos?q=amigurumi",
+    pathname: "/produtos/amigurumi",
   },
   {
     id: 6,
     label: "Tapetes",
-    name: "tapete",
-    pathname: "/produtos?q=tapetes",
+    name: "tapetes",
+    pathname: "/produtos/tapetes",
   },
 ];
 
@@ -44,21 +44,25 @@ export const imagesHero = [
     id: 1,
     name: "Produto 1",
     url: "/images/hero/hero-1.webp",
+    pathname: "/produtos/bolsas",
   },
   {
     id: 2,
     name: "Produto 2",
     url: "/images/hero/hero-2.webp",
+    pathname: "/produtos/bolsas",
   },
   {
     id: 3,
     name: "Produto 3",
     url: "/images/hero/hero-3.webp",
+    pathname: "/produtos/vestuarios",
   },
   {
     id: 4,
     name: "Produto 4",
     url: "/images/hero/hero-4.webp",
+    pathname: "/produtos/vestuarios",
   },
 ];
 

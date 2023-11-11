@@ -16,14 +16,14 @@ import {
 } from "@/components/ui/card";
 
 export default function Products() {
-  const [currentCategory, setCurrentCategory] = useState("bolsa");
+  const [currentCategory, setCurrentCategory] = useState("bolsas");
   const [products, setProducts] = useState<any[]>([]);
 
   useEffect(() => {
     setProducts([
       {
         id: v4(),
-        bolsa: [
+        bolsas: [
           {
             id: v4(),
             name: "Bolsa Estudante",
@@ -88,7 +88,7 @@ export default function Products() {
       },
       {
         id: v4(),
-        vestuario: [
+        vestuarios: [
           {
             id: v4(),
             name: "Biquini",
@@ -152,7 +152,7 @@ export default function Products() {
       },
       {
         id: v4(),
-        "porta-guardanapo": [
+        "porta-guardanapos": [
           {
             id: v4(),
             name: "Porta Guardanapo",
@@ -228,7 +228,7 @@ export default function Products() {
       },
       {
         id: v4(),
-        tapete: [
+        tapetes: [
           {
             id: v4(),
             name: "Tapete",
@@ -295,10 +295,12 @@ export default function Products() {
       </ul>
 
       <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5">
-        {/* {imagesProducts.map((category: any) => { */}
         {products.map((category: any) => {
           return category[currentCategory]?.map((item: any) => (
-            <Link key={item.id} href={`/produtos/${item.id}`}>
+            <Link
+              key={item.id}
+              href={`/produtos/${currentCategory}/${item.id}`}
+            >
               <Card className="group cursor-pointer overflow-hidden transition-all hover:shadow-md">
                 <CardContent className="p-0">
                   <img
@@ -324,7 +326,7 @@ export default function Products() {
       </div>
 
       <Link
-        href="/products"
+        href={`/produtos/${currentCategory}`}
         className="group flex w-fit cursor-pointer items-baseline text-2xl font-semibold text-bellarte-300"
       >
         Explorar produtos{" "}
