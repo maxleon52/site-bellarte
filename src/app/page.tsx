@@ -13,7 +13,7 @@ async function getData() {
     order,
     name,
     image,
-    category->{name},
+    category->{name, "slug": slug.current},
   }`;
 
   const data = await client.fetch(query);

@@ -49,11 +49,7 @@ export default function Hero({ data }: HeroProps) {
               <strong className="bg-gradient-to-r from-bellarte-400 via-bellarte-300 to-bellarte-200 bg-clip-text text-3xl text-bellarte-800 md:text-5xl md:text-transparent">
                 {item.name}
               </strong>
-              <Link
-                href={`produtos/${item.category.name.toLowerCase()}/${
-                  item._id
-                }`}
-              >
+              <Link href={`produtos/${item.category.slug}/${item._id}`}>
                 <Button
                   variant="outline"
                   className="w-fit border-bellarte-300 bg-zinc-50 text-lg text-bellarte-300 hover:bg-bellarte-50 hover:text-bellarte-300 md:px-6 md:py-4 md:text-xl 2xl:px-8 2xl:py-6"

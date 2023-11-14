@@ -39,19 +39,6 @@ export const linksHeader = [
   },
 ];
 
-export const imagesHighlights = [
-  {
-    id: 1,
-    name: "Bolsa vermelha",
-    url: "/images/highlights/bolsa-vermelha.webp",
-  },
-  {
-    id: 2,
-    name: "Bolsa Marrom",
-    url: "/images/highlights/bolsa-marrom.webp",
-  },
-];
-
 // export const imagesProducts = [
 //   {
 //     id: v4(),
