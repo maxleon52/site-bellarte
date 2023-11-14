@@ -39,33 +39,6 @@ export const linksHeader = [
   },
 ];
 
-export const imagesHero = [
-  {
-    id: 1,
-    name: "Produto 1",
-    url: "/images/hero/hero-1.webp",
-    pathname: "/produtos/bolsas",
-  },
-  {
-    id: 2,
-    name: "Produto 2",
-    url: "/images/hero/hero-2.webp",
-    pathname: "/produtos/bolsas",
-  },
-  {
-    id: 3,
-    name: "Produto 3",
-    url: "/images/hero/hero-3.webp",
-    pathname: "/produtos/vestuarios",
-  },
-  {
-    id: 4,
-    name: "Produto 4",
-    url: "/images/hero/hero-4.webp",
-    pathname: "/produtos/vestuarios",
-  },
-];
-
 export const imagesHighlights = [
   {
     id: 1,

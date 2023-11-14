@@ -3,7 +3,8 @@
 import Link from "next/link";
 import React from "react";
 
-import { imagesHero } from "@/constants";
+import { urlFor } from "@/lib/sanity";
+import { HeroTypes } from "@/types/home";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -12,7 +13,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Button } from "@/components/ui/button";
 
-export default function Hero() {
+interface HeroProps {
+  data: HeroTypes[];
+}
+
+export default function Hero({ data }: HeroProps) {
   return (
     <section className="flex flex-col gap-y-8 bg-bellarte-25/[0.15] pt-8 md:pt-12 xl:px-16 2xl:px-40 2xl:pt-16">
       <h1 className="bg-gradient-to-r from-bellarte-400 via-bellarte-300 to-bellarte-200 bg-clip-text text-center text-2xl font-extrabold text-transparent md:text-3xl xl:text-4xl 2xl:text-5xl">
@@ -35,16 +40,20 @@ export default function Hero() {
         // onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log("slide change")}
       >
-        {imagesHero.map((item) => (
+        {data.map((item) => (
           <SwiperSlide
-            key={item.id}
+            key={item._id}
             className="!flex h-auto !items-center !justify-center gap-0 !overflow-hidden !bg-transparent md:!gap-12"
           >
             <div className="absolute bottom-[30px] flex w-full flex-col items-center justify-center gap-2 bg-[rgba(255,255,255,0.55)] py-2 md:relative md:w-fit md:items-start md:gap-4 md:bg-transparent md:py-0">
               <strong className="bg-gradient-to-r from-bellarte-400 via-bellarte-300 to-bellarte-200 bg-clip-text text-3xl text-bellarte-800 md:text-5xl md:text-transparent">
                 {item.name}
               </strong>
-              <Link href={`${item.pathname}/${item.id}`}>
+              <Link
+                href={`produtos/${item.category.name.toLowerCase()}/${
+                  item._id
+                }`}
+              >
                 <Button
                   variant="outline"
                   className="w-fit border-bellarte-300 bg-zinc-50 text-lg text-bellarte-300 hover:bg-bellarte-50 hover:text-bellarte-300 md:px-6 md:py-4 md:text-xl 2xl:px-8 2xl:py-6"
@@ -57,7 +66,7 @@ export default function Hero() {
             <img
               loading="lazy"
               id={`teste`}
-              src={item.url}
+              src={urlFor(item.image).url()}
               alt={item.name}
               className="w-auto md:max-w-[40%] lg:max-w-[30%] 2xl:max-w-[50%]"
             />
