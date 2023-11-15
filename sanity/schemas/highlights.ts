@@ -9,6 +9,11 @@ export default {
       title: 'Nome do produto',
     },
     {
+      name: 'description',
+      type: 'string',
+      title: 'Pequena descrição do produto',
+    },
+    {
       name: 'image',
       type: 'image',
       title: 'Imagem',

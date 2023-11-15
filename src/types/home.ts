@@ -18,4 +18,5 @@ export type HighlightsTypes = {
   _id: string;
   order: number;
   name: string;
+  description: string;
 };

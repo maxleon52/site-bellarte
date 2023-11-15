@@ -10,6 +10,7 @@ async function getData() {
     order,
     name,
     image,
+    description,
     category->{name, "slug": slug.current},
   }`;
 
@@ -39,7 +40,7 @@ export default async function Highlights() {
                   {item.name}
                 </span>
                 <span className="text-zinc-400 md:text-lg xl:text-xl">
-                  Breve descrição
+                  {item.description}
                 </span>
               </div>
 
