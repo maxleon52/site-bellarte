@@ -31,12 +31,6 @@ export const linksHeader = [
     name: "amigurumi",
     pathname: "/produtos/amigurumi",
   },
-  {
-    id: 6,
-    label: "Tapetes",
-    name: "tapetes",
-    pathname: "/produtos/tapetes",
-  },
 ];
 
 // export const imagesProducts = [
