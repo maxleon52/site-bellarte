@@ -24,12 +24,12 @@ const datafake = [
 ];
 export default function Testimonials() {
   return (
-    <section className="flex flex-col gap-4 bg-bellarte-25/[0.15] py-12 md:gap-6 xl:gap-8 ">
+    <section className="flex flex-col gap-4 bg-slate-100 py-12 md:gap-6 xl:gap-8 ">
       <h2 className=" bg-gradient-to-r from-bellarte-400 via-bellarte-300 to-bellarte-200 bg-clip-text px-4 text-3xl font-bold text-transparent md:px-8 md:text-5xl xl:px-16 2xl:px-40">
         Avaliações
       </h2>
 
-      <p className="px-4 text-zinc-400 md:px-8 md:text-lg xl:px-16 xl:text-xl 2xl:px-40">
+      <p className="px-4 text-slate-400 md:px-8 md:text-lg xl:px-16 xl:text-xl 2xl:px-40">
         Veja o que nossos clientes estão falando.
       </p>
 
@@ -67,32 +67,32 @@ export default function Testimonials() {
               key={idx}
               className="!max-w-[calc(100%-15%)] flex-none sm:!max-w-[calc(100%-50%)]"
             >
-              <div className="grid justify-items-center gap-8 rounded-lg border border-zinc-200 bg-white p-8 2xl:flex">
+              <div className="grid justify-items-center gap-8 rounded-lg border border-slate-200 bg-white p-8 2xl:flex">
                 {/* imagem */}
                 <img
                   src="/images/eu.webp"
                   alt="foto do usuário"
-                  className="h-20 w-20 flex-none rounded-full bg-zinc-300 object-cover 2xl:h-24 2xl:w-24"
+                  className="h-20 w-20 flex-none rounded-full bg-slate-300 object-cover 2xl:h-24 2xl:w-24"
                 />
 
                 <div className="grid gap-4">
-                  <Quote className="stroke-zinc-400" />
-                  <p className="text-justify text-sm text-zinc-500 xl:text-base">
+                  <Quote className="stroke-slate-400" />
+                  <p className="text-justify text-sm text-slate-500 xl:text-base">
                     {item}
                   </p>
 
                   <div className="flex items-center justify-between">
-                    <strong className="text-zinc-500">Fulano de tal</strong>
+                    <strong className="text-slate-500">Fulano de tal</strong>
                     <div className="flex gap-2">
-                      <small className="text-zinc-500">veja em:</small>
+                      <small className="text-slate-500">veja em:</small>
                       <a href="">
-                        <Instagram className="h-4 w-4 stroke-zinc-400 transition-all hover:stroke-violet-500" />
+                        <Instagram className="h-4 w-4 stroke-slate-400 transition-all hover:stroke-violet-500" />
                       </a>
                       <a href="">
-                        <Facebook className="h-4 w-4 stroke-zinc-400 transition-all hover:stroke-blue-500" />
+                        <Facebook className="h-4 w-4 stroke-slate-400 transition-all hover:stroke-blue-500" />
                       </a>
                       <a href="">
-                        <Twitter className="h-4 w-4 stroke-zinc-400 transition-all hover:stroke-sky-500" />
+                        <Twitter className="h-4 w-4 stroke-slate-400 transition-all hover:stroke-sky-500" />
                       </a>
                     </div>
                   </div>

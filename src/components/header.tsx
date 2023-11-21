@@ -60,7 +60,7 @@ export default function Header() {
               <li key={link.id}>
                 <Link
                   href={link.pathname}
-                  className="text-lg text-zinc-500 transition-all hover:text-bellarte-800"
+                  className="text-lg text-slate-500 transition-all hover:text-bellarte-800"
                 >
                   {link.label}
                 </Link>
@@ -71,9 +71,9 @@ export default function Header() {
 
         <Sheet>
           <SheetTrigger className="xl:hidden">
-            <div className="my-[0.25rem] h-0.5 w-5 rounded-full bg-zinc-950/70" />
-            <div className="my-[0.25rem] h-0.5 w-5 rounded-full bg-zinc-950/70" />
-            <div className="my-[0.25rem] h-0.5 w-5 rounded-full bg-zinc-950/70" />
+            <div className="my-[0.25rem] h-0.5 w-5 rounded-full bg-slate-500" />
+            <div className="my-[0.25rem] h-0.5 w-5 rounded-full bg-slate-500" />
+            <div className="my-[0.25rem] h-0.5 w-5 rounded-full bg-slate-500" />
           </SheetTrigger>
           <SheetContent side="left" className="flex flex-col gap-4 xl:hidden">
             <SheetHeader>
@@ -96,9 +96,9 @@ export default function Header() {
                   <li key={link.id}>
                     <Link
                       href={link.pathname}
-                      className="text-lg text-zinc-500 transition-all hover:text-bellarte-800"
+                      className="text-lg text-slate-500 transition-all hover:text-bellarte-800"
                     >
-                      {link.name}
+                      {link.label}
                     </Link>
                   </li>
                 ))}
@@ -109,7 +109,7 @@ export default function Header() {
       </div>
 
       <button>
-        <ShoppingCart className="stroke-zinc-950/70" />
+        <ShoppingCart className="stroke-slate-500" />
       </button>
     </header>
   );

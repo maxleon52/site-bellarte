@@ -20,7 +20,7 @@ export default function Footer() {
           />
         </Link>
 
-        <p className="text-base text-zinc-400">
+        <p className="text-base text-slate-400">
           © Copyright 2023 - Bellarte-crochê
         </p>
       </div>
