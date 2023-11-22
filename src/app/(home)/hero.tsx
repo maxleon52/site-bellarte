@@ -61,8 +61,7 @@ export default function Hero({ data }: HeroProps) {
 
             <img
               loading="lazy"
-              id={`teste`}
-              src={urlFor(item.image).url()}
+              src={urlFor(item.images[0]).url()}
               alt={item.name}
               className="w-auto md:max-w-[40%] lg:max-w-[30%] 2xl:max-w-[50%]"
             />

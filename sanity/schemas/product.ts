@@ -4,6 +4,21 @@ export default {
   title: 'Produto',
   fields: [
     {
+      name: 'heroImage',
+      type: 'boolean',
+      title: 'Deve aparecer na seção inicial?',
+    },
+    {
+      name: 'highlight',
+      type: 'boolean',
+      title: 'Deve aparecer na seção de Destaques?',
+    },
+    {
+      name: 'order',
+      type: 'number',
+      title: 'Ordem de exibição no carrosel (Só preencher se for exibir!)',
+    },
+    {
       name: 'name',
       type: 'string',
       title: 'Nome do produto',

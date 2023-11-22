@@ -1,5 +1,5 @@
 export type HeroTypes = {
-  image: any;
+  images: any[];
   category: {
     name: string;
     slug: string;

@@ -42,7 +42,7 @@ export default async function Products({
   return (
     <section className="flex flex-1 flex-col gap-6 px-4 py-8 md:px-8 xl:px-16 2xl:px-40">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <h2 className="bg-gradient-to-r from-bellarte-400 via-bellarte-300 to-bellarte-200 bg-clip-text text-3xl font-bold text-transparent md:text-5xl">
+        <h2 className="bg-gradient-to-r from-bellarte-400 via-bellarte-300 to-bellarte-200 bg-clip-text text-3xl font-bold text-transparent md:pb-1 md:text-5xl">
           {dictionary[params.category]}
         </h2>
       </div>

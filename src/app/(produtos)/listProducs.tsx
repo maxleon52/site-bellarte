@@ -31,7 +31,7 @@ export default function ListProducts({ data }: PaginatinoProps) {
 
   return (
     <>
-      <div className="grid flex-1 grid-cols-2 gap-2 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5">
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5">
         {visibleProducts.map((product) => {
           return (
             <Link
@@ -44,7 +44,7 @@ export default function ListProducts({ data }: PaginatinoProps) {
         })}
       </div>
       {itensPerPage < data.length && (
-        <div className="flex justify-center gap-1 xl:justify-end">
+        <div className="flex justify-center gap-1 xl:justify-start">
           {pagination.range.map((range) =>
             range === "dots" ? (
               <button

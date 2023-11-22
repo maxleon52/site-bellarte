@@ -2,16 +2,18 @@ import Link from "next/link";
 import React from "react";
 
 import { client, urlFor } from "@/lib/sanity";
-import { HighlightsTypes } from "@/types/home";
+import { Product } from "@/types/product";
 
 async function getData() {
-  const query = `*[_type == 'highlightsImages'] | order(order asc){
-    _id,
-    order,
-    name,
-    image,
-    description,
-    category->{name, "slug": slug.current},
+  const query = `*[_type == 'product' && highlight == true] | order(order asc){
+      _id,
+      name,
+      price,
+      images,
+      description,
+      "slug":slug.current,
+      category->{name, "slug": slug.current},
+      order
   }`;
 
   const data = await client.fetch(query);
@@ -20,7 +22,7 @@ async function getData() {
 }
 
 export default async function Highlights() {
-  const data: HighlightsTypes[] = await getData();
+  const data: Product[] = await getData();
 
   return (
     <section className="flex flex-col gap-6 px-4 py-8 md:px-8 xl:px-16 2xl:px-40">
@@ -47,7 +49,7 @@ export default async function Highlights() {
 
               <img
                 loading="lazy"
-                src={urlFor(item.image).url()}
+                src={urlFor(item.images[0]).url()}
                 alt="imagem de carinho de compras"
                 className="w-[50%] object-cover transition-all group-hover:scale-110"
               />

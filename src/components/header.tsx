@@ -3,12 +3,12 @@ import Link from "next/link";
 import React from "react";
 
 import { linksHeader } from "@/constants";
-import { cn } from "@/lib/utils";
 import { ShoppingCart } from "lucide-react";
 
 import { Separator } from "@/components/ui/separator";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
@@ -16,33 +16,8 @@ import {
 } from "@/components/ui/sheet";
 
 export default function Header() {
-  // const [scrolling, setScrolling] = useState(false);
-
-  // useEffect(() => {
-  //   // Adiciona um ouvinte de evento para detectar o scroll
-  //   const handleScroll = () => {
-  //     if (window.scrollY > 0) {
-  //       setScrolling(true);
-  //     } else {
-  //       setScrolling(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   // Remove o ouvinte de evento quando o componente é desmontado
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   return (
-    <header
-      className={cn(
-        "sticky top-0 z-20 flex h-20 items-center justify-between overflow-hidden bg-transparent bg-white px-4 shadow-sm md:h-24 md:px-8 xl:px-16 2xl:px-40",
-        // scrolling === false ? "bg-transparent" : "bg-white shadow-sm",
-      )}
-    >
+    <header className="sticky top-0 z-20 flex h-20 items-center justify-between overflow-hidden bg-transparent bg-white px-4 shadow-sm md:h-24 md:px-8 xl:px-16 2xl:px-40">
       <Link href="/">
         <Image
           src="/svgs/logo-bellarte.svg"
@@ -94,12 +69,14 @@ export default function Header() {
               <ul className="flex flex-col gap-6 text-left">
                 {linksHeader.map((link) => (
                   <li key={link.id}>
-                    <Link
-                      href={link.pathname}
-                      className="text-lg text-slate-500 transition-all hover:text-bellarte-800"
-                    >
-                      {link.label}
-                    </Link>
+                    <SheetClose asChild>
+                      <Link
+                        href={link.pathname}
+                        className="text-lg text-slate-500 transition-all hover:text-bellarte-800"
+                      >
+                        {link.label}
+                      </Link>
+                    </SheetClose>
                   </li>
                 ))}
               </ul>
