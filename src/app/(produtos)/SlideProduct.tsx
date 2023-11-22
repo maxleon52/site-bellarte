@@ -1,17 +1,12 @@
-/* eslint-disable jsx-a11y/alt-text */
 "use client";
 
 import React, { useState } from "react";
 
-// import required modules
 import { urlFor } from "@/lib/sanity";
 import { FreeMode, Mousewheel, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
 import "swiper/css/free-mode";
 import "swiper/css/scrollbar";
 
@@ -21,8 +16,6 @@ interface SlideProductProps {
 export default function SlideProduct({ images }: SlideProductProps) {
   const [currentImg, setCurrentImg] = useState(urlFor(images[0])?.url() || "");
 
-  console.log(images);
-
   return (
     <div className="grid gap-6 xl:grid-cols-[200px_1fr]">
       <Swiper
@@ -31,7 +24,6 @@ export default function SlideProduct({ images }: SlideProductProps) {
         pagination={{
           clickable: true,
         }}
-        // navigation={true}
         freeMode={true}
         scrollbar={{
           hide: true,
@@ -83,7 +75,6 @@ export default function SlideProduct({ images }: SlideProductProps) {
         }}
         mousewheel={true}
         modules={[FreeMode, Mousewheel, Scrollbar]}
-        // modules={[Pagination, Navigation]}
         slidesPerView={"auto"}
         className="!max-h-[150px] w-full overflow-hidden xl:!max-h-[600px]"
       >
