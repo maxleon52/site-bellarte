@@ -4,17 +4,11 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 import { linksHeader } from "@/constants";
-import { client, urlFor } from "@/lib/sanity";
+import { client } from "@/lib/sanity";
 import { ProductsTypes } from "@/types/home";
 import { ArrowRight } from "lucide-react";
 
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import CardProduct from "@/components/CardProduct";
 
 interface IProducts {
   amigurumi: ProductsTypes[];
@@ -36,8 +30,6 @@ export default function Products() {
 
   useEffect(() => {
     async function fetchData(category: string) {
-      console.log("antes: ", category);
-
       try {
         const query = `*[_type == 'product' && category->name == '${category}']{
           _id,
@@ -50,8 +42,6 @@ export default function Products() {
         }[0...10]`;
 
         const data = await client.fetch<ProductsTypes[]>(query);
-
-        // console.log("data: ", data);
 
         setProducts((prev) => {
           return { ...prev, [currentCategory]: data };
@@ -83,28 +73,12 @@ export default function Products() {
       </ul>
 
       <div className="grid grid-cols-2 gap-2 md:grid-cols-2 md:gap-6 lg:grid-cols-4 xl:grid-cols-5">
-        {products[currentCategory as keyof IProducts]?.map((item: any) => (
-          <Link key={item._id} href={`/produtos/${currentCategory}/${item.id}`}>
-            <Card className="group grid h-[270px] cursor-pointer grid-rows-[65%_40px_30px] gap-2 overflow-hidden transition-all hover:shadow-md md:h-[450px] md:grid-rows-[70%_70px_40px] md:gap-0">
-              <CardContent className="overflow-hidden bg-slate-100 p-0">
-                <img
-                  loading="lazy"
-                  src={urlFor(item.images[0]).url()}
-                  alt={item.name}
-                  className="h-full w-full object-cover transition-all group-hover:scale-105"
-                />
-              </CardContent>
-              <CardHeader className="px-2 py-0 md:px-4 md:py-4">
-                <CardTitle className="text-xl leading-none text-bellarte-300 md:text-2xl md:leading-none">
-                  {item.name}
-                </CardTitle>
-              </CardHeader>
-              <CardFooter className="px-2 py-0 md:px-4 md:py-4">
-                <span className="text-lg text-bellarte-300 md:text-xl">
-                  R$ 999,00
-                </span>
-              </CardFooter>
-            </Card>
+        {products[currentCategory as keyof IProducts]?.map((product) => (
+          <Link
+            key={product._id}
+            href={`/produtos/${currentCategory}/${product._id}`}
+          >
+            <CardProduct product={product} />
           </Link>
         ))}
       </div>

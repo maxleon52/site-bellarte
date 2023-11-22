@@ -22,7 +22,7 @@ export type HighlightsTypes = {
 };
 
 export type ProductsTypes = {
-  image: any;
+  images: any;
   category: {
     name: string;
     slug: string;
