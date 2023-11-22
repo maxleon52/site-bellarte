@@ -5,7 +5,7 @@ import { Facebook, Instagram, Share2, ShoppingCart } from "lucide-react";
 import ButtonBuyWhatsapp from "@/components/buttonBuyWhatsapp";
 import { Button } from "@/components/ui/button";
 
-import SlideProduct from "../../../slideProduct";
+import SlideProduct from "../../slideProducts";
 
 async function fetchData(_id: string) {
   const query = `*[_type == 'product' && _id == '${_id}']{
