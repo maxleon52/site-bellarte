@@ -34,7 +34,7 @@ export default async function Product({ params }: { params: { id: string } }) {
       {/* Column 3 */}
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
-          <h2 className="text-slate-400">
+          <h2 className="text-lg text-slate-400">
             Categoria: {data[0]?.category.name}
           </h2>
 
@@ -58,21 +58,21 @@ export default async function Product({ params }: { params: { id: string } }) {
 
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <span className="text-base font-semibold text-slate-500 xl:text-xl ">
+            <span className="text-lg font-semibold text-slate-500 xl:text-xl ">
               Compartilhar
             </span>
             <div className="flex gap-4">
-              <Facebook className="h-4 w-fit cursor-pointer stroke-slate-400 transition-all hover:opacity-75 xl:h-6" />
-              <Instagram className="h-4 w-fit cursor-pointer stroke-slate-400 transition-all hover:opacity-75 xl:h-6" />
-              <Share2 className="h-4 w-fit cursor-pointer stroke-slate-400 transition-all hover:opacity-75 xl:h-6" />
+              <Facebook className="h-5 w-fit cursor-pointer stroke-slate-400 transition-all hover:opacity-75 xl:h-6" />
+              <Instagram className="h-5 w-fit cursor-pointer stroke-slate-400 transition-all hover:opacity-75 xl:h-6" />
+              <Share2 className="h-5 w-fit cursor-pointer stroke-slate-400 transition-all hover:opacity-75 xl:h-6" />
             </div>
           </div>
 
           <div>
-            <span className="text-base font-semibold text-slate-500 xl:text-xl">
+            <span className="text-lg font-semibold text-slate-500 xl:text-xl">
               Descrição
             </span>
-            <p className="text-base text-slate-400 xl:text-xl">
+            <p className="text-lg text-slate-400 xl:text-xl">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione
               ad totam, laboriosam magnam quaerat repellat corporis ab natus
               necessitatibus. Expedita minus, possimus magnam accusantium
