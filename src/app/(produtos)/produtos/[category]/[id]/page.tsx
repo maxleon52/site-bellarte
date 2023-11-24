@@ -2,10 +2,9 @@ import { client } from "@/lib/sanity";
 import { Product as ProductTypes } from "@/types/product";
 import { Facebook, Instagram, Share2, ShoppingCart } from "lucide-react";
 
-import ButtonBuyWhatsapp from "@/components/buttonBuyWhatsapp";
 import { Button } from "@/components/ui/button";
 
-import SlideProduct from "../../slideProducts";
+import SlideProduct from "../../../slideProducts";
 
 async function fetchData(_id: string) {
   const query = `*[_type == 'product' && _id == '${_id}']{
@@ -46,28 +45,16 @@ export default async function Product({ params }: { params: { id: string } }) {
           </span>
 
           <div className="flex flex-col gap-4 py-2 md:flex-row">
-            <ButtonBuyWhatsapp className="md:w-fit" />
             <Button
               className="h-12 border-slate-300 text-slate-500 md:w-fit"
               variant="outline"
             >
-              ADICIONAR <ShoppingCart className="ml-2 h-4" />
+              ADICIONAR AO CARRINHO <ShoppingCart className="ml-2 h-4" />
             </Button>
           </div>
         </div>
 
         <div className="flex flex-col gap-4">
-          <div className="flex flex-col gap-2">
-            <span className="text-lg font-semibold text-slate-500 xl:text-xl ">
-              Compartilhar
-            </span>
-            <div className="flex gap-4">
-              <Facebook className="h-5 w-fit cursor-pointer stroke-slate-400 transition-all hover:opacity-75 xl:h-6" />
-              <Instagram className="h-5 w-fit cursor-pointer stroke-slate-400 transition-all hover:opacity-75 xl:h-6" />
-              <Share2 className="h-5 w-fit cursor-pointer stroke-slate-400 transition-all hover:opacity-75 xl:h-6" />
-            </div>
-          </div>
-
           <div>
             <span className="text-lg font-semibold text-slate-500 xl:text-xl">
               Descrição
@@ -81,6 +68,17 @@ export default async function Product({ params }: { params: { id: string } }) {
               quaerat repellat corporis ab natus necessitatibus. Expedita minus,
               possimus magnam accusantium blanditiis iusto hic tempora ex nisi.
             </p>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <span className="text-lg font-semibold text-slate-500 xl:text-xl ">
+              Compartilhar
+            </span>
+            <div className="flex gap-4">
+              <Facebook className="h-5 w-fit cursor-pointer stroke-slate-400 transition-all hover:opacity-75 xl:h-6" />
+              <Instagram className="h-5 w-fit cursor-pointer stroke-slate-400 transition-all hover:opacity-75 xl:h-6" />
+              <Share2 className="h-5 w-fit cursor-pointer stroke-slate-400 transition-all hover:opacity-75 xl:h-6" />
+            </div>
           </div>
         </div>
       </div>

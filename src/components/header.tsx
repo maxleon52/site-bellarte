@@ -3,7 +3,6 @@ import Link from "next/link";
 import React from "react";
 
 import { linksHeader } from "@/constants";
-import { ShoppingCart } from "lucide-react";
 
 import { Separator } from "@/components/ui/separator";
 import {
@@ -14,6 +13,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+
+import Cart from "./cart";
 
 export default function Header() {
   return (
@@ -85,9 +86,7 @@ export default function Header() {
         </Sheet>
       </div>
 
-      <button>
-        <ShoppingCart className="stroke-slate-500" />
-      </button>
+      <Cart />
     </header>
   );
 }
