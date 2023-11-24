@@ -74,12 +74,7 @@ export default function Products() {
 
       <div className="grid grid-cols-2 gap-2 md:grid-cols-2 md:gap-6 lg:grid-cols-4 xl:grid-cols-5">
         {products[currentCategory as keyof IProducts]?.map((product) => (
-          <Link
-            key={product._id}
-            href={`/produtos/${currentCategory}/${product._id}`}
-          >
-            <CardProduct product={product} />
-          </Link>
+          <CardProduct key={product._id} product={product} />
         ))}
       </div>
 

@@ -2,18 +2,21 @@ import React from "react";
 
 import { cn } from "@/lib/utils";
 
-import { Button } from "./ui/button";
+import { Button, ButtonProps } from "./ui/button";
 
-interface ButtonProps {
-  className?: string;
-}
-export default function ButtonBuyWhatsapp({ className }: ButtonProps) {
+type ButtonBuyWhatsappProps = ButtonProps;
+
+export default function ButtonBuyWhatsapp({
+  className,
+  ...rest
+}: ButtonBuyWhatsappProps) {
   return (
     <Button
       className={cn(
         "flex h-12 w-full items-center justify-center bg-[#1EBB55] hover:bg-[#1EBB55]/80",
         className,
       )}
+      {...rest}
     >
       COMPRAR
       <svg

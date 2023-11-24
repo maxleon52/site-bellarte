@@ -1,8 +1,7 @@
+import ButtonAddToCart from "@/app/(produtos)/buttonAddToCart";
 import { client } from "@/lib/sanity";
 import { Product as ProductTypes } from "@/types/product";
-import { Facebook, Instagram, Share2, ShoppingCart } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
+import { Facebook, Instagram, Share2 } from "lucide-react";
 
 import SlideProduct from "../../../slideProducts";
 
@@ -44,14 +43,9 @@ export default async function Product({ params }: { params: { id: string } }) {
             R$ 999,00
           </span>
 
-          <div className="flex flex-col gap-4 py-2 md:flex-row">
-            <Button
-              className="h-12 border-slate-300 text-slate-500 md:w-fit"
-              variant="outline"
-            >
-              ADICIONAR AO CARRINHO <ShoppingCart className="ml-2 h-4" />
-            </Button>
-          </div>
+          <ButtonAddToCart product={data[0]}>
+            ADICIONAR AO CARRINHO
+          </ButtonAddToCart>
         </div>
 
         <div className="flex flex-col gap-4">
