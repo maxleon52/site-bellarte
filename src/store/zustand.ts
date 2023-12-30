@@ -4,12 +4,11 @@ import { create } from "zustand";
 interface ProductCart extends Product {
   qtd: number;
 }
-type Store = {
+export type Store = {
   cart: ProductCart[];
   addToCart: (product: Product) => void;
   minusQtdToCart: (product: Product) => void;
   removeToCart: (product: Product) => void;
-  myLog: () => void;
   // removeAll: () => void;
 };
 
@@ -17,7 +16,6 @@ type Store = {
 // get: Função para pegar uma informação do estado (STORE)
 export const useStore = create<Store>((set, get) => ({
   cart: [],
-  myLog: () => console.log(get().cart),
   addToCart: (item: Product) =>
     set((state) => {
       const foundProduct = state.cart.find((i) => i._id === item._id);

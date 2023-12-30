@@ -79,7 +79,10 @@ export default function SlideProduct({ images }: SlideProductProps) {
         className="!max-h-[150px] w-full overflow-hidden xl:!max-h-[600px]"
       >
         {images.map((img) => (
-          <SwiperSlide key={img._key} className="w-fit xl:!h-fit xl:w-full">
+          <SwiperSlide
+            key={img._key}
+            className="w-fit cursor-pointer xl:!h-fit xl:w-full"
+          >
             <img
               loading="lazy"
               src={urlFor(img).url()}

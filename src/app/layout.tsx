@@ -25,7 +25,6 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-
         <WhatsappIcon />
       </body>
     </html>

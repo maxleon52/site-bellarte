@@ -9,6 +9,7 @@ import { ProductsTypes } from "@/types/home";
 import { ArrowRight } from "lucide-react";
 
 import CardProduct from "@/components/CardProduct";
+import SkeletonCardProduct from "@/components/skeletonCardProduct";
 
 interface IProducts {
   amigurumi: ProductsTypes[];
@@ -19,6 +20,7 @@ interface IProducts {
 }
 
 export default function Products() {
+  const [isLoading, setIsLoading] = useState(false);
   const [currentCategory, setCurrentCategory] = useState<string>("bolsas");
   const [products, setProducts] = useState<IProducts>({
     amigurumi: [],
@@ -30,6 +32,8 @@ export default function Products() {
 
   useEffect(() => {
     async function fetchData(category: string) {
+      setIsLoading(true);
+
       try {
         const query = `*[_type == 'product' && category->name == '${category}']{
           _id,
@@ -38,14 +42,39 @@ export default function Products() {
           images,
           description,
           "slug":slug.current,
-          category->{name, "slug": slug.current},  
+          category->{name, "slug": slug.current},
         }[0...10]`;
 
-        const data = await client.fetch<ProductsTypes[]>(query);
+        // await new Promise(function (resolve) {
+        //   setTimeout(resolve, 5000);
+        // });
+
+        const response = await client.fetch<ProductsTypes[]>(query);
+
+        const dataFormatted = response.map((item: any) => {
+          let lines = item.description
+            .split("\n")
+            .map((line: string, index: number) => {
+              line = line.trim();
+              if (index === 0 || line.startsWith("-") || line.startsWith("*")) {
+                return line;
+              } else {
+                return `- ${line.replace(/^\*+/, "")}`;
+              }
+            });
+          // Remover linhas em branco e linhas que contenham apenas '-' ou '*'
+          lines = lines.filter((line: any) => line && !/^[-*]+$/.test(line));
+
+          return {
+            ...item,
+            description: lines,
+          };
+        });
 
         setProducts((prev) => {
-          return { ...prev, [currentCategory]: data };
+          return { ...prev, [currentCategory]: dataFormatted };
         });
+        setIsLoading(false);
       } catch (error) {
         console.log("error: ", error);
       }
@@ -73,9 +102,19 @@ export default function Products() {
       </ul>
 
       <div className="grid grid-cols-2 gap-2 md:grid-cols-2 md:gap-6 lg:grid-cols-4 xl:grid-cols-5">
-        {products[currentCategory as keyof IProducts]?.map((product) => (
-          <CardProduct key={product._id} product={product} />
-        ))}
+        {isLoading ? (
+          <>
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+              <SkeletonCardProduct key={item} />
+            ))}
+          </>
+        ) : (
+          <>
+            {products[currentCategory as keyof IProducts]?.map((product) => (
+              <CardProduct key={product._id} product={product} />
+            ))}
+          </>
+        )}
       </div>
 
       <Link

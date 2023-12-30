@@ -30,7 +30,7 @@ export type ProductsTypes = {
   _id: string;
   order: number;
   name: string;
-  description: string;
+  description: string[];
   price: number;
   slug: string;
 };

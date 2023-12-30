@@ -15,7 +15,9 @@ async function getData() {
       category->{name, "slug": slug.current},
       order
   }`;
-
+  // await new Promise(function (resolve) {
+  //   setTimeout(resolve, 5000);
+  // });
   const data = await client.fetch(query);
 
   return data;
@@ -43,7 +45,8 @@ export default async function Highlights() {
                   {item.name}
                 </span>
                 <span className="hidden font-medium text-slate-400 xl:flex xl:text-xl">
-                  {item.description}
+                  {/* {item.description.slice(0, 30)} */}
+                  veja mais detalhes
                 </span>
               </div>
 

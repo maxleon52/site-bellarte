@@ -4,7 +4,7 @@ import React from "react";
 
 import FacebookIcon from "./facebook";
 import InstagramIcon from "./instagram";
-import MessengerIcon from "./messenger";
+// import MessengerIcon from "./messenger";
 
 export default function Footer() {
   return (
@@ -21,14 +21,14 @@ export default function Footer() {
         </Link>
 
         <p className="text-base text-slate-400">
-          © Copyright 2023 - Bellarte-crochê
+          © Copyright {new Date().getFullYear()} - Bellarte-crochê
         </p>
       </div>
 
       <div className="flex gap-2">
         <InstagramIcon />
         <FacebookIcon />
-        <MessengerIcon />
+        {/* <MessengerIcon /> */}
       </div>
     </footer>
   );

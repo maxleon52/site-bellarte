@@ -22,10 +22,7 @@ export default function CardProduct({ product }: CardProductProps) {
   return (
     <Card className="group grid h-[270px] grid-rows-[65%_40px_30px] gap-2 overflow-hidden transition-all hover:shadow-md md:h-[450px] md:grid-rows-[70%_70px_40px] md:gap-0">
       <CardContent className="cursor-pointer overflow-hidden bg-slate-100 p-0">
-        <Link
-          key={product._id}
-          href={`/produtos/${product.category.name}/${product._id}`}
-        >
+        <Link href={`/produtos/${product.category.name}/${product._id}`}>
           <img
             loading="lazy"
             src={urlFor(product.images[0]).url()}

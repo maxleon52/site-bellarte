@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import React, { useState } from "react";
 
 import { cn } from "@/lib/utils";
@@ -32,16 +31,9 @@ export default function ListProducts({ data }: PaginatinoProps) {
   return (
     <>
       <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-6 lg:grid-cols-4 xl:grid-cols-5">
-        {visibleProducts.map((product) => {
-          return (
-            <Link
-              key={product._id}
-              href={`/produtos/${product.category.name}/${product._id}`}
-            >
-              <CardProduct product={product} />
-            </Link>
-          );
-        })}
+        {visibleProducts.map((product) => (
+          <CardProduct key={product._id} product={product} />
+        ))}
       </div>
       {itensPerPage < data.length && (
         <div className="flex justify-center gap-1 xl:justify-start">

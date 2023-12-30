@@ -19,12 +19,8 @@ export default function ButtonAddToCart({
   children,
   className,
 }: ButtonAddToCartProps) {
-  const [addToCart, myLogii] = useStore((state) => [
-    state.addToCart,
-    state.myLog,
-  ]);
+  const [addToCart] = useStore((state) => [state.addToCart]);
 
-  myLogii();
   return (
     <Button
       className={cn(

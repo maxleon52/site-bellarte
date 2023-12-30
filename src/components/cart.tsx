@@ -41,7 +41,7 @@ export default function Cart() {
 
   return (
     <div className="relative">
-      <span className="absolute -right-3 -top-3 flex min-h-[24px] min-w-[24px] items-center justify-center rounded-full border border-white bg-red-400 px-1 text-sm font-bold text-white">
+      <span className="absolute -right-3 -top-3 z-[1] flex min-h-[24px] min-w-[24px] items-center justify-center rounded-full border border-white bg-red-400 px-1 text-sm font-bold text-white">
         {sumQtdItems}
       </span>
 

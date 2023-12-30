@@ -1,11 +1,14 @@
+import { Suspense } from "react";
+
 import { client } from "@/lib/sanity";
 
-import Banner from "./(home)/banner";
+// import Banner from "./(home)/banner";
 import Contact from "./(home)/contact";
 import Hero from "./(home)/hero";
 import Highlights from "./(home)/highlights";
 import Products from "./(home)/products";
-import Testimonials from "./(home)/testimonials";
+import SkeletonHighlights from "./(home)/skeletonHighlight";
+// import Testimonials from "./(home)/testimonials";
 
 async function getData() {
   const query = `*[_type == 'product' && heroImage == true] | order(order asc){
@@ -29,10 +32,17 @@ export default async function Home() {
   return (
     <>
       <Hero data={data} />
-      <Banner />
-      <Highlights />
+
+      {/* <Banner /> */}
+
+      <Suspense fallback={<SkeletonHighlights />}>
+        <Highlights />
+      </Suspense>
+
       <Products />
-      <Testimonials />
+
+      {/* <Testimonials /> */}
+
       <Contact />
     </>
   );

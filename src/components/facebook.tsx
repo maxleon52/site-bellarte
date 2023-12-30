@@ -8,7 +8,11 @@ interface IconProps {
 
 function FacebookIcon({ className }: IconProps) {
   return (
-    <a href="" className="rounded-full">
+    <a
+      href="https://www.facebook.com/bellartecroch?sfnsn=wiwspwa&mibextid=vk8aRt"
+      target="_blank"
+      className="rounded-full"
+    >
       <svg
         width={70}
         height={70}

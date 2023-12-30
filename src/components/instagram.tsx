@@ -8,7 +8,11 @@ interface IconProps {
 
 function InstagramIcon({ className }: IconProps) {
   return (
-    <a href="" className="rounded-full">
+    <a
+      href="https://www.instagram.com/bellarte_croche/"
+      target="_blank"
+      className="rounded-full"
+    >
       <svg
         width={70}
         height={70}
