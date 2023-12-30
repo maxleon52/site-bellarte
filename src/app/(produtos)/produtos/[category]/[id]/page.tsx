@@ -38,15 +38,11 @@ async function fetchData(_id: string) {
     };
   });
 
-  console.log({ dataFormatted });
-
   return dataFormatted;
 }
 
 export default async function Product({ params }: { params: { id: string } }) {
   const data: ProductTypes[] = await fetchData(params.id);
-
-  console.log({ data });
 
   return (
     <section className="grid flex-1 grid-cols-1 gap-6 px-4 py-8 md:px-8 xl:grid-cols-[1fr_500px] xl:px-16 2xl:grid-cols-2 2xl:px-40">

@@ -11,6 +11,7 @@ function WhatsappIcon({ className }: IconProps) {
     <a
       href="https://api.whatsapp.com/send?phone=5588999047788"
       className="fixed bottom-2 right-2 z-10 animate-pulseShadow rounded-full"
+      target="_blank"
     >
       <svg
         width={70}
