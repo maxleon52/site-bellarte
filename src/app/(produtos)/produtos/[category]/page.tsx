@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import React from "react";
 
 import { client } from "@/lib/sanity";
@@ -15,6 +16,20 @@ const dictionary: translateType = {
   "porta-guardanapos": "Porta guardanapos",
   amigurumi: "Amigurumi",
 };
+
+export async function generateMetadata(props: any): Promise<Metadata> {
+  return {
+    title: `${props.params.category}`,
+    description: `${props.params.category} de qualidade impecavel`,
+    robots: {
+      follow: true,
+      index: true,
+    },
+    alternates: {
+      canonical: `https://www.bellartecroche.com.br/${props.params.category}`,
+    },
+  };
+}
 
 async function fetchData(category: string) {
   const query = `*[_type == 'product' && category->name == '${category}']{

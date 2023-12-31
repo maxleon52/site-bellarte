@@ -8,8 +8,6 @@ import { Product as ProductTypes } from "@/types/product";
 import SlideProduct from "../../../slideProducts";
 
 export async function generateMetadata(props: any): Promise<Metadata> {
-  console.log({ props });
-
   const query = `*[_type == 'product' && _id == '${props.params.id}']{
     _id,
     name,
@@ -100,7 +98,7 @@ export default async function Product({ params }: { params: { id: string } }) {
             <span className="text-lg font-semibold text-slate-500 xl:text-xl">
               Descrição
             </span>
-            {data[0].description.map((desc) => (
+            {data[0]?.description.map((desc) => (
               <p key={desc} className="text-lg text-slate-400 xl:text-xl">
                 {desc}
               </p>

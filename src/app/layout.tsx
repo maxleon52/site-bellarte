@@ -18,8 +18,15 @@ export const metadata: Metadata = {
   icons: {
     icon: "/icon.svg",
   },
+  robots: {
+    follow: true,
+    index: true,
+  },
   verification: {
     google: "eJwvhqGdk-R7Eq32uuxwX8j6Pn3PV2U9QBwsIEcj3tk",
+  },
+  alternates: {
+    canonical: "https://www.bellartecroche.com.br",
   },
 };
 
