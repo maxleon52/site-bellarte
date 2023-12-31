@@ -10,8 +10,14 @@ import WhatsappIcon from "@/components/whatsapp";
 const alegreya = Alegreya({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Bellarte Crochê",
+  title: {
+    default: "Bellarte Crochê",
+    template: "Bellarte Crochê | %s",
+  },
   description: "Artesanato em luxo",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

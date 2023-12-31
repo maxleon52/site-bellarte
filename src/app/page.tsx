@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { Suspense } from "react";
 
 import { client } from "@/lib/sanity";
@@ -9,6 +10,14 @@ import Highlights from "./(home)/highlights";
 import Products from "./(home)/products";
 import SkeletonHighlights from "./(home)/skeletonHighlight";
 // import Testimonials from "./(home)/testimonials";
+
+export const metadata: Metadata = {
+  title: "Bellarte Crochê",
+  description: "Artesanato em luxo",
+  openGraph: {
+    images: ["https://www.instagram.com/p/CzjAx6tOACx/"],
+  },
+};
 
 async function getData() {
   const query = `*[_type == 'product' && heroImage == true] | order(order asc){

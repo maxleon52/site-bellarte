@@ -1,9 +1,36 @@
+import { Metadata } from "next";
+
 import ButtonAddToCart from "@/app/(produtos)/buttonAddToCart";
-import { client } from "@/lib/sanity";
+import { client, urlFor } from "@/lib/sanity";
 import { formatValue } from "@/lib/utils";
 import { Product as ProductTypes } from "@/types/product";
 
 import SlideProduct from "../../../slideProducts";
+
+export async function generateMetadata(props: any): Promise<Metadata> {
+  console.log({ props });
+
+  const query = `*[_type == 'product' && _id == '${props.params.id}']{
+    _id,
+    name,
+    images,
+    description,
+  }`;
+
+  const response = await client.fetch(query);
+
+  return {
+    title: `${response[0].name}`,
+    description: `${response[0].description}`,
+    openGraph: {
+      images: [urlFor(response[0].images[0]).url()],
+    },
+    robots: {
+      follow: true,
+      index: true,
+    },
+  };
+}
 
 async function fetchData(_id: string) {
   const query = `*[_type == 'product' && _id == '${_id}']{
