@@ -5,6 +5,7 @@ import { client } from "@/lib/sanity";
 
 // import Banner from "./(home)/banner";
 import Contact from "./(home)/contact";
+import Faqs from "./(home)/faqs";
 import Hero from "./(home)/hero";
 import Highlights from "./(home)/highlights";
 import Products from "./(home)/products";
@@ -49,6 +50,8 @@ export default async function Home() {
       </Suspense>
 
       <Products />
+
+      <Faqs />
 
       {/* <Testimonials /> */}
 

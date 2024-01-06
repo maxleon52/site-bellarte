@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Contact() {
   return (
-    <section className="flex flex-col items-center justify-center gap-6 bg-slate-100 p-4 py-12 md:px-8 xl:px-16 2xl:px-40">
+    <section className="flex flex-col items-center justify-center gap-6 p-4 py-12 md:px-8 xl:px-16 2xl:px-40">
       <h3 className="text-xl font-bold text-slate-400 md:text-3xl">
         Não achou o que gostaria? 🙁
       </h3>
