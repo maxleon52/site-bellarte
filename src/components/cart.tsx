@@ -19,7 +19,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import ButtonBuyWhatsapp from "./buttonBuyWhatsapp";
+import ButtonBuyWhatsapp from "./button-buy-whatsapp";
 
 export default function Cart() {
   const [cart, addToCart, minusQtdToCart, removeToCart] = useStore((state) => [

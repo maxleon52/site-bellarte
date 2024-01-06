@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-import ButtonAddToCart from "@/app/(produtos)/buttonAddToCart";
+import ButtonAddToCart from "@/app/(produtos)/button-add-to-cart";
 import { urlFor } from "@/lib/sanity";
 import { formatValue } from "@/lib/utils";
 import { Product } from "@/types/product";

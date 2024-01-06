@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { Product } from "@/types/product";
 import { usePagination } from "@mantine/hooks";
 
-import CardProduct from "@/components/CardProduct";
+import CardProduct from "@/components/card-product";
 
 const itensPerPage = 10;
 

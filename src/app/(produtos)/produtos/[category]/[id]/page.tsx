@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 
-import ButtonAddToCart from "@/app/(produtos)/buttonAddToCart";
+import ButtonAddToCart from "@/app/(produtos)/button-add-to-cart";
 import { client, urlFor } from "@/lib/sanity";
 import { formatValue } from "@/lib/utils";
 import { Product as ProductTypes } from "@/types/product";
 
-import SlideProduct from "../../../slideProducts";
+import SlideProduct from "../../../slide-products";
 
 export async function generateMetadata(props: any): Promise<Metadata> {
   const query = `*[_type == 'product' && _id == '${props.params.id}']{
@@ -66,7 +66,11 @@ async function fetchData(_id: string) {
   return dataFormatted;
 }
 
-export default async function Product({ params }: { params: { id: string } }) {
+export default async function Product({
+  params,
+}: {
+  params: { id: string; slug: string };
+}) {
   const data: ProductTypes[] = await fetchData(params.id);
 
   return (

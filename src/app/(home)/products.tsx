@@ -8,8 +8,8 @@ import { client } from "@/lib/sanity";
 import { ProductsTypes } from "@/types/home";
 import { ArrowRight } from "lucide-react";
 
-import CardProduct from "@/components/CardProduct";
-import SkeletonCardProduct from "@/components/skeletonCardProduct";
+import CardProduct from "@/components/card-product";
+import SkeletonCardProduct from "@/components/skeleton-card-product";
 
 interface IProducts {
   amigurumi: ProductsTypes[];

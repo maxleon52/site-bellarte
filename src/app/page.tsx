@@ -9,7 +9,7 @@ import Faqs from "./(home)/faqs";
 import Hero from "./(home)/hero";
 import Highlights from "./(home)/highlights";
 import Products from "./(home)/products";
-import SkeletonHighlights from "./(home)/skeletonHighlight";
+import SkeletonHighlights from "./(home)/skeleton-highlight";
 // import Testimonials from "./(home)/testimonials";
 
 export const metadata: Metadata = {

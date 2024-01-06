@@ -4,7 +4,7 @@ import React from "react";
 import { client } from "@/lib/sanity";
 import { Product } from "@/types/product";
 
-import ListProducts from "../../listProducs";
+import ListProducts from "../../list-producs";
 
 type translateType = {
   [key: string]: string;
