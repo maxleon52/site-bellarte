@@ -5,15 +5,18 @@ import { cn } from "@/lib/utils";
 
 import { Button, ButtonProps } from "./ui/button";
 
-type ButtonBuyWhatsappProps = ButtonProps;
+type ButtonBuyWhatsappProps = ButtonProps & {
+  message: string;
+};
 
 export default function ButtonBuyWhatsapp({
   className,
+  message,
   ...rest
 }: ButtonBuyWhatsappProps) {
   return (
     <Link
-      href={"https://api.whatsapp.com/send?phone=5588999047788"}
+      href={`https://api.whatsapp.com/send?phone=5588999047788&text=${message}`}
       target="_blank"
     >
       <Button

@@ -29,20 +29,32 @@ export default function Cart() {
     state.removeToCart,
   ]);
 
-  const sumQtdItems = cart.reduce((acc, i) => {
+  const SUM_QTD_ITEMS = cart.reduce((acc, i) => {
     acc = acc + i.qtd;
     return acc;
   }, 0);
 
-  const sumTotal = cart.reduce((acc, i) => {
+  const SUM_TOTAL = cart.reduce((acc, i) => {
     acc = acc + i.qtd * i.price;
     return acc;
   }, 0);
 
+  const WELCOME_STRING = `Olá, gostei desse(s) item(s):`;
+  const QUEST_STRING = `como fechamos o pedido?`;
+  const TOTAL_STRING = `TOTAL: ${formatValue(SUM_TOTAL)}`;
+  const ITEMS = cart
+    .map(
+      (item) =>
+        `\n ${item.qtd} - ${item.name}: ${formatValue(item.qtd * item.price)}`,
+    )
+    .join("");
+  const TEXT = `NOVO PEDIDO\n${WELCOME_STRING}\n${ITEMS}\n\n${TOTAL_STRING}\n\n${QUEST_STRING}`;
+  const MESSAGE = window.encodeURIComponent(TEXT);
+
   return (
     <div className="relative">
       <span className="absolute -right-3 -top-3 z-[1] flex min-h-[24px] min-w-[24px] items-center justify-center rounded-full border border-white bg-red-400 px-1 text-sm font-bold text-white">
-        {sumQtdItems}
+        {SUM_QTD_ITEMS}
       </span>
 
       <Sheet>
@@ -112,14 +124,14 @@ export default function Cart() {
 
           <div className="flex items-center justify-between">
             <span className="text-base font-medium">
-              QTD items: {sumQtdItems}
+              QTD items: {SUM_QTD_ITEMS}
             </span>
             <span className="text-base font-medium">
-              Total: {formatValue(sumTotal)}
+              Total: {formatValue(SUM_TOTAL)}
             </span>
           </div>
 
-          <ButtonBuyWhatsapp disabled={sumQtdItems <= 0} />
+          <ButtonBuyWhatsapp disabled={SUM_QTD_ITEMS <= 0} message={MESSAGE} />
         </SheetContent>
       </Sheet>
     </div>
