@@ -43,13 +43,13 @@ export default function Cart() {
   const QUEST_STRING = `como fechamos o pedido?`;
   const TOTAL_STRING = `TOTAL: ${formatValue(SUM_TOTAL)}`;
   const ITEMS = cart
-    .map(
-      (item) =>
-        `\n ${item.qtd} - ${item.name}: ${formatValue(item.qtd * item.price)}`,
-    )
+    .map((item) => `\n ${item.qtd} - ${item.name}: ${formatValue(item.price)}`)
     .join("");
   const TEXT = `NOVO PEDIDO\n${WELCOME_STRING}\n${ITEMS}\n\n${TOTAL_STRING}\n\n${QUEST_STRING}`;
-  const MESSAGE = window.encodeURIComponent(TEXT);
+  let MESSAGE = "";
+  if (typeof window !== "undefined") {
+    MESSAGE = window.encodeURIComponent(TEXT);
+  }
 
   return (
     <div className="relative">
